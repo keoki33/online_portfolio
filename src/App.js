@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import About from "./About";
+import Projects from "./Projects";
+import Resume from "./Resume";
+import Contact from "./Contact";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
+class App extends Component {
+  state = {
+    x: 0,
+    y: 0,
+    navbarClass: "navbarIn"
+  };
+
+  whatever = () => {};
+
+  mouseTrack(e) {
+    this.setState({ x: e.screenX, y: e.screenY });
+  }
+
+  render() {
+    return (
+      <Router>
+        <div
+          className="main"
+          onMouseMove={event => {
+            this.mouseTrack(event);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {console.log(`x: ${this.state.x}`)}
+          <Navbar x={this.state.x} navbarClass={this.state.navbarClass} />
+          <Switch>
+            <Route
+              exact
+              path={["/recipes", "/home", "/"]}
+              render={props => <Home />}
+            />
+            <Route path="/about" render={props => <About />} />
+            <Route path="/projects" render={props => <Projects />} />
+            <Route path="/resume" render={props => <Resume />} />
+            <Route path="/contact" render={props => <Contact />} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
