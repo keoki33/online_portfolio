@@ -7,11 +7,18 @@ body {
 .main {
   width: 100vw;
   height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */
 
+.link {
+  /* text-align: justify; */
+}
+
 .navbarIn {
+  margin: 0 auto;
   color: rgb(32, 32, 32);
   font-size: 1.8vw;
   text-align: center;
@@ -23,6 +30,7 @@ body {
 }
 
 .navbarOut {
+  margin: 0 auto;
   color: rgb(32, 32, 32);
   font-size: 1.8vw;
   text-align: center;
@@ -36,6 +44,34 @@ body {
 .facePic {
   width: 5vw;
   padding: 2%;
+}
+
+@media screen and (max-width: 800px) {
+  .navbarIn {
+    color: rgb(32, 32, 32);
+
+    text-align: space-between;
+    text-decoration: none;
+    height: 13vw;
+    width: 99vw;
+    border: 2px solid #1c6ea4;
+    animation: navSlideIn 1s ease forwards;
+  }
+
+  .navbarOut {
+    color: rgb(32, 32, 32);
+
+    text-align: space-between;
+    text-decoration: none;
+    height: 13vw;
+    width: 99vw;
+    border: 2px solid #1c6ea4;
+    animation: navSlideOut 1s ease forwards;
+  }
+  .facePic {
+    width: 5vw;
+    padding: 2%;
+  }
 }
 
 /* a {
@@ -103,20 +139,44 @@ a:hover::after {
 
 .home {
   animation: bottom-in 1s ease forwards;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  z-index: 1;
+}
+
+.home h1,
+h2 {
+  text-align: center;
+  margin: 15px;
 }
 
 .about,
 .projects,
 .resume,
 .contact {
+  margin-left: 5vw;
+  margin-right: 5vw;
   animation: slideIn 1s ease forwards;
+  height: 65vh;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  background-color: rgb(167, 167, 167);
+  align-content: center;
+  width: 100%;
+  height: 3vh;
+  z-index: 2;
+  margin-top: 10vh;
 }
 
 /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */
 
 @keyframes bottom-in {
   0% {
-    transform: translateY(80%);
+    opacity: 0;
+    transform: translateY(70%);
   }
 
   150% {

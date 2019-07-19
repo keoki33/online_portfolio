@@ -14,7 +14,8 @@ class Home extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h1>Home Page</h1>
+        <h1>George Wong</h1>
+        <h2>Full Stack Developer</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
           incidunt, at natus sint, magni cupiditate maxime ipsam architecto
@@ -33,6 +34,33 @@ class Home extends Component {
           voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
           harum nisi. Dolores repudiandae quia unde?
         </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
+          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
+          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
+          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
+          harum nisi. Dolores repudiandae quia unde?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
+          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
+          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
+          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
+          harum nisi. Dolores repudiandae quia unde?
+        </p>{" "}
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
+          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
+          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
+          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
+          harum nisi. Dolores repudiandae quia unde?
+        </p>{" "}
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
           incidunt, at natus sint, magni cupiditate maxime ipsam architecto

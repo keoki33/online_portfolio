@@ -6,6 +6,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -32,9 +33,9 @@ class App extends Component {
           this.setState({ clicked: false });
         }, 1000)
       );
-    } else if (this.state.x > 2430) {
+    } else if (this.state.x > 2550) {
       this.setState({ facePic: "./images/230.png" });
-    } else if (this.state.x < 2100) {
+    } else if (this.state.x < 2330) {
       this.setState({ facePic: "./images/130.png" });
     } else {
       this.setState({ facePic: "./images/180.png" });
@@ -73,6 +74,7 @@ class App extends Component {
               <Route path="/contact" render={props => <Contact />} />
             </div>
           </Switch>
+          {/* <Footer /> */}
         </div>
       </Router>
     );
