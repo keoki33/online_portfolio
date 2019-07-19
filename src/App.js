@@ -13,14 +13,37 @@ class App extends Component {
   state = {
     x: 0,
     y: 0,
-    navbarClass: "navbarIn"
+    clicked: false,
+    navbarClass: "navbarIn",
+    facePic: "./images/180.png"
   };
 
   whatever = () => {};
 
   mouseTrack(e) {
     this.setState({ x: e.screenX, y: e.screenY });
+    this.facePic();
   }
+
+  facePic = () => {
+    if (this.state.clicked) {
+      this.setState({ facePic: "./images/smile.jpg" }, () =>
+        setTimeout(() => {
+          this.setState({ clicked: false });
+        }, 1000)
+      );
+    } else if (this.state.x > 2430) {
+      this.setState({ facePic: "./images/230.png" });
+    } else if (this.state.x < 2100) {
+      this.setState({ facePic: "./images/130.png" });
+    } else {
+      this.setState({ facePic: "./images/180.png" });
+    }
+  };
+
+  handleClick = () => {
+    this.setState({ clicked: true });
+  };
 
   render() {
     return (
@@ -32,17 +55,23 @@ class App extends Component {
           }}
         >
           {console.log(`x: ${this.state.x}`)}
-          <Navbar x={this.state.x} navbarClass={this.state.navbarClass} />
+          <Navbar
+            facePic={this.state.facePic}
+            navbarClass={this.state.navbarClass}
+            handleClick={this.handleClick}
+          />
           <Switch>
-            <Route
-              exact
-              path={["/recipes", "/home", "/"]}
-              render={props => <Home />}
-            />
-            <Route path="/about" render={props => <About />} />
-            <Route path="/projects" render={props => <Projects />} />
-            <Route path="/resume" render={props => <Resume />} />
-            <Route path="/contact" render={props => <Contact />} />
+            <div className="content">
+              <Route
+                exact
+                path={["/recipes", "/home", "/"]}
+                render={props => <Home />}
+              />
+              <Route path="/about" render={props => <About />} />
+              <Route path="/projects" render={props => <Projects />} />
+              <Route path="/resume" render={props => <Resume />} />
+              <Route path="/contact" render={props => <Contact />} />
+            </div>
           </Switch>
         </div>
       </Router>

@@ -9,22 +9,149 @@ body {
   height: 100vh;
 }
 
+/* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */
+
 .navbarIn {
   color: rgb(32, 32, 32);
   font-size: 1.8vw;
   text-align: center;
   text-decoration: none;
-  height: 15vw;
+  height: 13vw;
   width: 80vw;
   border: 2px solid #1c6ea4;
+  animation: navSlideIn 1s ease forwards;
 }
 
-a {
+.navbarOut {
+  color: rgb(32, 32, 32);
+  font-size: 1.8vw;
+  text-align: center;
+  text-decoration: none;
+  height: 13vw;
+  width: 80vw;
+  border: 2px solid #1c6ea4;
+  animation: navSlideOut 1s ease forwards;
+}
+
+.facePic {
+  width: 5vw;
+  padding: 2%;
+}
+
+/* a {
   font-size: 200%;
   color: rgb(32, 32, 32);
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
   color: #00f;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+} */
+
+a {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5vw;
+
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  border-bottom: 2px solid rgb(0, 17, 255);
+}
+
+a,
+a::after {
+  transition: all 0.15s linear;
+}
+
+a:hover {
+  color: rgb(0, 17, 255);
+  transform: scale(1.1);
+}
+
+a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */
+
+.content {
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.about img {
+  float: left;
+  padding: 15%;
+}
+
+.home {
+  animation: bottom-in 1s ease forwards;
+}
+
+.about,
+.projects,
+.resume,
+.contact {
+  animation: slideIn 1s ease forwards;
+}
+
+/* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */
+
+@keyframes bottom-in {
+  0% {
+    transform: translateY(80%);
+  }
+
+  150% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes navSlideOut {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-55%);
+  }
+}
+
+@keyframes navSlideIn {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
