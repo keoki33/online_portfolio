@@ -16,17 +16,18 @@ class Contact extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h1>Don't be a stranger</h1>
-        <img
-          src={require("./images/email.png")}
-          alt=""
-          className="facePic"
-        />{" "}
-        <img
-          src={require("./images/linkedIn.png")}
-          alt=""
-          className="facePic"
-        />{" "}
+        <h1>Hello | Hola | Néih Hóu</h1>
+        <a href="mailto: george.t.wong+contact@gmail.com">
+          <img src={require("./images/email.svg")} alt="" className="facePic" />{" "}
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://linkedin.com/in/george-wong-515470168" target="_blank">
+          <img
+            src={require("./images/linkedIn.png")}
+            alt=""
+            className="facePic"
+          />
+        </a>
       </div>
     );
   }

@@ -88,7 +88,7 @@ a:hover {
   transform: scale(1.3);
 } */
 
-a {
+.link {
   position: relative;
   display: inline-block;
   font-size: 2.5vw;
@@ -97,7 +97,7 @@ a {
   text-decoration: none;
 }
 
-a::after {
+.link::after {
   content: "";
   position: absolute;
 
@@ -108,17 +108,17 @@ a::after {
   border-bottom: 2px solid rgb(0, 17, 255);
 }
 
-a,
-a::after {
+.link,
+.link::after {
   transition: all 0.15s linear;
 }
 
-a:hover {
+.link:hover {
   color: rgb(0, 17, 255);
   transform: scale(1.1);
 }
 
-a:hover::after {
+.link:hover::after {
   left: 0;
   width: 100%;
 }
@@ -166,9 +166,22 @@ h2 {
   font-size: 30px;
 }
 
+.contact a {
+  text-decoration: none;
+}
+
 .contact img {
+  text-decoration: none;
   padding: 20px;
   width: 100px;
+  transition: transform 0.3s;
+  /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
+}
+
+.contact img:hover {
+  border: none;
+  transform: scale(1.05);
 }
 
 .footer {

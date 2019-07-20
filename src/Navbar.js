@@ -20,9 +20,10 @@ class Navbar extends Component {
       <div className={this.state.class}>
         <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "}
         <br />
-        <div className="link">
+        <div className="">
           <Link
             to="/"
+            className="link"
             onClick={event => {
               this.setState({ class: "navbarIn" });
             }}
@@ -38,6 +39,7 @@ class Navbar extends Component {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link
             to="/about"
+            className="link"
             onClick={event => {
               this.setState({ class: "navbarOut" });
             }}
@@ -53,6 +55,7 @@ class Navbar extends Component {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link
             to="/projects"
+            className="link"
             onClick={event => {
               this.setState({ class: "navbarOut" });
             }}
@@ -68,6 +71,7 @@ class Navbar extends Component {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link
             to="/resume"
+            className="link"
             onClick={event => {
               this.setState({ class: "navbarOut" });
             }}
@@ -83,6 +87,7 @@ class Navbar extends Component {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link
             to="/contact"
+            className="link"
             onClick={event => {
               this.setState({ class: "navbarOut" });
             }}
