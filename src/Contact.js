@@ -16,25 +16,17 @@ class Contact extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h1>Contact</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
-          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
-          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
-          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
-          harum nisi. Dolores repudiandae quia unde?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
-          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
-          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
-          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
-          harum nisi. Dolores repudiandae quia unde?
-        </p>
+        <h1>Don't be a stranger</h1>
+        <img
+          src={require("./images/email.png")}
+          alt=""
+          className="facePic"
+        />{" "}
+        <img
+          src={require("./images/linkedIn.png")}
+          alt=""
+          className="facePic"
+        />{" "}
       </div>
     );
   }

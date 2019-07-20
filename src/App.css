@@ -160,6 +160,17 @@ h2 {
   height: 65vh;
 }
 
+.contact {
+  padding: 3px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact img {
+  padding: 20px;
+  width: 100px;
+}
+
 .footer {
   position: relative;
   bottom: 0;
