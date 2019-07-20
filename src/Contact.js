@@ -17,7 +17,7 @@ class Contact extends Component {
     return (
       <div className={this.state.class}>
         <h1>Hello | Hola | Néih Hóu</h1>
-        <a href="mailto: ">
+        <a href="mailto: contact@georgetlwong.com">
           <img src={require("./images/email.svg")} alt="" className="facePic" />{" "}
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
