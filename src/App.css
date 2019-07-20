@@ -20,11 +20,11 @@ body {
 .navbarIn {
   margin: 0 auto;
   color: rgb(32, 32, 32);
-  font-size: 1.8vw;
+  font-size: 25px;
   text-align: center;
   text-decoration: none;
-  height: 13vw;
-  width: 80vw;
+  height: 130px;
+  width: 100%;
   border: 2px solid #1c6ea4;
   animation: navSlideIn 1s ease forwards;
 }
@@ -32,44 +32,44 @@ body {
 .navbarOut {
   margin: 0 auto;
   color: rgb(32, 32, 32);
-  font-size: 1.8vw;
+  font-size: 25px;
   text-align: center;
   text-decoration: none;
-  height: 13vw;
-  width: 80vw;
+  height: 130px;
+  width: 100%;
   border: 2px solid #1c6ea4;
   animation: navSlideOut 1s ease forwards;
 }
 
 .facePic {
-  width: 5vw;
-  padding: 2%;
+  width: 50px;
+  padding: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 605px) {
   .navbarIn {
     color: rgb(32, 32, 32);
-
-    text-align: space-between;
+    font-size: 15px;
+    text-align: center;
     text-decoration: none;
-    height: 13vw;
-    width: 99vw;
+    height: 80px;
+    width: 100%;
     border: 2px solid #1c6ea4;
     animation: navSlideIn 1s ease forwards;
   }
 
   .navbarOut {
     color: rgb(32, 32, 32);
-
-    text-align: space-between;
+    font-size: 15px;
+    text-align: center;
     text-decoration: none;
-    height: 13vw;
-    width: 99vw;
+    height: 80px;
+    width: 100%;
     border: 2px solid #1c6ea4;
     animation: navSlideOut 1s ease forwards;
   }
   .facePic {
-    width: 5vw;
+    width: 25px;
     padding: 2%;
   }
 }
@@ -91,7 +91,7 @@ a:hover {
 .link {
   position: relative;
   display: inline-block;
-  font-size: 2.5vw;
+  /* font-size: 2.5vw; */
 
   color: rgb(32, 32, 32);
   text-decoration: none;
@@ -182,6 +182,23 @@ h2 {
 .contact img:hover {
   border: none;
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 705px) {
+  .contact {
+    padding: 1%;
+    text-align: center;
+    font-size: 4.1vw;
+  }
+
+  .contact img {
+    text-decoration: none;
+    padding: 5%;
+    width: 15vw;
+    transition: transform 0.3s;
+    /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
+  }
 }
 
 .footer {
