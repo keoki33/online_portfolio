@@ -15,9 +15,18 @@ class Navbar extends Component {
     }
   };
 
+  componentDidMount() {
+    if (window.location.pathname === "/") {
+      this.setState({ class: "navbarIn" });
+    } else {
+      this.setState({ class: "navbarOut" });
+    }
+  }
+
   render() {
     return (
       <div className={this.state.class}>
+        {console.log(window.location.pathname)}
         <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "}
         <br />
         <div className="">
