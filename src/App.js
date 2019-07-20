@@ -51,7 +51,7 @@ class App extends Component {
       <Router>
         <div
           className="main"
-          onTouchMove={event => {
+          onTouchStart={event => {
             this.mouseTrack(event);
           }}
           onMouseMove={event => {
