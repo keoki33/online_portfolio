@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Document, Page } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
 
 class Resume extends Component {
-  state = { class: "resume" };
+  state = { class: "resume", numPages: null, pageNumber: 1, file: pdfFile };
 
   whatever = () => {};
 
@@ -11,38 +11,22 @@ class Resume extends Component {
     this.setState({ class: "resume" });
   }
 
+  onDocumentLoadSuccess = ({ numPages }) => {
+    this.setState({ numPages });
+  };
+
   whatever = () => {};
 
   render() {
+    const { pageNumber, numPages } = this.state;
     return (
       <div className={this.state.class}>
         <h1>Resume</h1>
+        <Document file="file" onLoadSuccess={this.onDocumentLoadSuccess}>
+          <Page pageNumber={pageNumber} />
+        </Document>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
-          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
-          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
-          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
-          harum nisi. Dolores repudiandae quia unde?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
-          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
-          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
-          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
-          harum nisi. Dolores repudiandae quia unde?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          incidunt, at natus sint, magni cupiditate maxime ipsam architecto
-          voluptatibus quis itaque numquam quidem mollitia corrupti odit fugiat
-          repudiandae aliquid fuga. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Atque, corrupti autem alias fuga totam laudantium
-          voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
-          harum nisi. Dolores repudiandae quia unde?
+          Page {pageNumber} of {numPages}
         </p>
       </div>
     );
