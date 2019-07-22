@@ -17,7 +17,7 @@ body {
   /* text-align: justify; */
 }
 
-.navbarIn {
+nav {
   margin: 0 auto;
   color: rgb(32, 32, 32);
   font-size: 25px;
@@ -26,18 +26,32 @@ body {
   height: 130px;
   width: 100%;
   border: 2px solid #1c6ea4;
+  align-items: center;
+
+  justify-content: space-around;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin: 0;
+  margin-left: 10%;
+  padding: 0;
+}
+
+.navLinks ul,
+.navLinks li {
+  display: inline;
+  list-style: none;
+}
+
+.navbarIn {
   animation: navSlideIn 1s ease forwards;
 }
 
 .navbarOut {
-  margin: 0 auto;
-  color: rgb(32, 32, 32);
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  height: 130px;
-  width: 100%;
-  border: 2px solid #1c6ea4;
   animation: navSlideOut 1s ease forwards;
 }
 
@@ -92,7 +106,7 @@ a:hover {
   position: relative;
   display: inline-block;
   /* font-size: 2.5vw; */
-
+  justify-content: space-around;
   color: rgb(32, 32, 32);
   text-decoration: none;
 }
@@ -100,7 +114,7 @@ a:hover {
 .link::after {
   content: "";
   position: absolute;
-
+  justify-content: space-around;
   bottom: 0;
   left: 50%;
   width: 0;

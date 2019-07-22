@@ -25,93 +25,103 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className={this.state.class}>
-        {console.log(window.location.pathname)}
+      <nav className={this.state.class}>
+        {/* {console.log(window.location.pathname)} */}
         <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "}
         <br />
-        <div className="">
-          <Link
-            to="/"
-            className="link"
-            onClick={event => {
-              this.setState({ class: "navbarIn" });
-            }}
-            onMouseEnter={event => {
-              this.setState({ hover: true });
-            }}
-            onMouseLeave={event => {
-              this.setState({ hover: false });
-            }}
-          >
-            Home
-          </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link
-            to="/about"
-            className="link"
-            onClick={event => {
-              this.setState({ class: "navbarOut" });
-            }}
-            onMouseEnter={event => {
-              this.setState({ hover: true });
-            }}
-            onMouseLeave={event => {
-              this.setState({ hover: false });
-            }}
-          >
-            About
-          </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link
-            to="/projects"
-            className="link"
-            onClick={event => {
-              this.setState({ class: "navbarOut" });
-            }}
-            onMouseEnter={event => {
-              this.setState({ hover: true });
-            }}
-            onMouseLeave={event => {
-              this.setState({ hover: false });
-            }}
-          >
-            Projects
-          </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link
-            to="/resume"
-            className="link"
-            onClick={event => {
-              this.setState({ class: "navbarOut" });
-            }}
-            onMouseEnter={event => {
-              this.setState({ hover: true });
-            }}
-            onMouseLeave={event => {
-              this.setState({ hover: false });
-            }}
-          >
-            Resume
-          </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link
-            to="/contact"
-            className="link"
-            onClick={event => {
-              this.setState({ class: "navbarOut" });
-            }}
-            onMouseEnter={event => {
-              this.setState({ hover: true });
-            }}
-            onMouseLeave={event => {
-              this.setState({ hover: false });
-            }}
-          >
+        <ul className="navLinks">
+          <li>
             {" "}
-            Contact
-          </Link>
-        </div>
-      </div>
+            <Link
+              to="/"
+              className="link"
+              onClick={event => {
+                this.setState({ class: "navbarIn" });
+              }}
+              onMouseEnter={event => {
+                this.setState({ hover: true });
+              }}
+              onMouseLeave={event => {
+                this.setState({ hover: false });
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link
+              to="/about"
+              className="link"
+              onClick={event => {
+                this.setState({ class: "navbarOut" });
+              }}
+              onMouseEnter={event => {
+                this.setState({ hover: true });
+              }}
+              onMouseLeave={event => {
+                this.setState({ hover: false });
+              }}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link
+              to="/projects"
+              className="link"
+              onClick={event => {
+                this.setState({ class: "navbarOut" });
+              }}
+              onMouseEnter={event => {
+                this.setState({ hover: true });
+              }}
+              onMouseLeave={event => {
+                this.setState({ hover: false });
+              }}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/resume"
+              className="link"
+              onClick={event => {
+                this.setState({ class: "navbarOut" });
+              }}
+              onMouseEnter={event => {
+                this.setState({ hover: true });
+              }}
+              onMouseLeave={event => {
+                this.setState({ hover: false });
+              }}
+            >
+              Resume
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link
+              to="/contact"
+              className="link"
+              onClick={event => {
+                this.setState({ class: "navbarOut" });
+              }}
+              onMouseEnter={event => {
+                this.setState({ hover: true });
+              }}
+              onMouseLeave={event => {
+                this.setState({ hover: false });
+              }}
+            >
+              {" "}
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }

@@ -51,14 +51,17 @@ class App extends Component {
       <Router>
         <div
           className="main"
-          onTouchStart={event => {
-            this.mouseTrack(event);
-          }}
+          // onTouchStart={event => {
+          //   this.mouseTrack(event);
+          // }}
+          // onTouchEnd={event => {
+          //   this.mouseTrack(event);
+          // }}
           onMouseMove={event => {
             this.mouseTrack(event);
           }}
         >
-          {console.log(`x: ${this.state.x}`)}
+          {/* {console.log(`x: ${this.state.x}`)} */}
           <Navbar
             facePic={this.state.facePic}
             navbarClass={this.state.navbarClass}
