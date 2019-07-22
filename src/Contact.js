@@ -20,20 +20,20 @@ class Contact extends Component {
 
   postMessage = event => {
     event.preventDefault();
-    fetch("https://boiling-tundra-71042.herokuapp.com/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        url: "",
-        email: "contactform@georgetlwong.com",
-        imageurl: "",
-        headline: `Email from portfolio ------ Name: ${
-          this.state.name
-        } | Email: ${this.state.email} | Message: ${this.state.message}`
-      })
-    });
+    // fetch("https://boiling-tundra-71042.herokuapp.com/email", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify({
+    //     url: "",
+    //     email: "contactform@georgetlwong.com",
+    //     imageurl: "",
+    //     headline: `Email from portfolio ------ Name: ${
+    //       this.state.name
+    //     } | Email: ${this.state.email} | Message: ${this.state.message}`
+    //   })
+    // });
     this.setState({ response: "Thank you for saying hello!" });
     setTimeout(() => {
       this.setState({ response: "" });
@@ -61,7 +61,6 @@ class Contact extends Component {
         <a href="mailto: contact@georgetlwong.com">
           <img src={require("./images/email.svg")} alt="" className="facePic" />{" "}
         </a>
-
         <a
           href="https://linkedin.com/in/george-wong-515470168"
           target="_blank"
@@ -73,7 +72,7 @@ class Contact extends Component {
             className="facePic"
           />
         </a>
-        {this.state.response}
+
         <form
           id="contactForm"
           name="contact"
@@ -82,10 +81,12 @@ class Contact extends Component {
             this.postMessage(event);
           }}
         >
+          <div className="response">{this.state.response}</div>
           <p>
             <label>
-              Your Name:{" "}
               <input
+                required
+                placeholder="Name:"
                 type="text"
                 name="name"
                 value={this.state.name}
@@ -97,8 +98,8 @@ class Contact extends Component {
           </p>
           <p>
             <label>
-              Your Email:{" "}
               <input
+                placeholder="Email:"
                 type="email"
                 name="email"
                 value={this.state.email}
@@ -111,8 +112,8 @@ class Contact extends Component {
 
           <p>
             <label>
-              Message:{" "}
               <textarea
+                placeholder="Message:"
                 name="message"
                 value={this.state.message}
                 onChange={event => {
@@ -121,9 +122,7 @@ class Contact extends Component {
               />
             </label>
           </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
+          <button type="submit">Send</button>
         </form>
       </div>
     );

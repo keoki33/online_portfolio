@@ -1,7 +1,8 @@
-body {
+body,
+body .link {
   padding: 0;
   margin: 0;
-  color: rgb(32, 32, 32);
+  /* color: rgb(175, 37, 37); */
 }
 
 .main {
@@ -19,7 +20,7 @@ body {
 
 nav {
   margin: 0 auto;
-  color: rgb(32, 32, 32);
+
   font-size: 25px;
   text-align: center;
   text-decoration: none;
@@ -168,6 +169,7 @@ h2 {
 .projects,
 .resume,
 .contact {
+  margin-top: -70px;
   margin-left: 5vw;
   margin-right: 5vw;
   animation: slideIn 1s ease forwards;
@@ -177,7 +179,7 @@ h2 {
 .contact {
   padding: 3px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .contact a {
@@ -185,9 +187,11 @@ h2 {
 }
 
 .contact img {
+  margin-left: 10px;
+  margin-right: 10px;
   text-decoration: none;
-  padding: 20px;
-  width: 100px;
+  padding: 15px;
+  width: 80px;
   transition: transform 0.3s;
   /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
@@ -196,6 +200,67 @@ h2 {
 .contact img:hover {
   border: none;
   transform: scale(1.05);
+}
+
+.contact form {
+  top: 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: 330px;
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
+}
+
+.contact input {
+  width: 500px;
+  height: 30px;
+}
+
+.contact textarea {
+  width: 500px;
+  height: 80px;
+}
+
+.contact p {
+  text-align: left;
+}
+
+.contact button {
+  color: rgb(255, 255, 255);
+  width: 90px;
+  font-size: 12px;
+  line-height: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background: #2284c5;
+  box-shadow: rgb(0, 0, 0) 2px 2px 5px 2px;
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+.contact button:hover {
+  background: #40b1fc;
+  transform: scale(1.05);
+}
+.contact button:active {
+  background: #144e75;
+  transform: scale(1);
+}
+
+.response {
+  width: 100%;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
 }
 
 @media screen and (max-width: 705px) {
@@ -212,6 +277,26 @@ h2 {
     transition: transform 0.3s;
     /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
+  }
+
+  .contact form {
+    width: 80%;
+    height: fit-content;
+  }
+
+  .contact input {
+    width: 100%;
+    height: 30px;
+  }
+
+  .contact textarea {
+    width: 100%;
+    height: 80px;
+  }
+
+  .contact button {
+    width: 60px;
+    font-size: 10px;
   }
 }
 
