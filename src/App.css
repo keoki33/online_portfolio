@@ -20,7 +20,7 @@ body .link {
 
 nav {
   margin: 0 auto;
-
+  position: relative;
   font-size: 25px;
   text-align: center;
   text-decoration: none;
@@ -28,8 +28,9 @@ nav {
   width: 100%;
   border: 2px solid #1c6ea4;
   align-items: center;
-
+  background-color: #f5f5f5;
   justify-content: space-around;
+  z-index: 3;
 }
 
 .navLinks {
@@ -153,7 +154,7 @@ a:hover {
 }
 
 .home {
-  animation: bottom-in 1s ease forwards;
+  animation: bottomIn 1s ease forwards;
   margin-left: 5vw;
   margin-right: 5vw;
   z-index: 1;
@@ -166,8 +167,8 @@ h2 {
 }
 
 .about,
-.projects,
 .resume,
+.projects,
 .contact {
   margin-top: -70px;
   margin-left: 5vw;
@@ -176,13 +177,29 @@ h2 {
   height: 65vh;
 }
 
+.pdf {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -60px;
+
+  /* margin-left: 20%;
+  margin-right: 20%; */
+}
+
+.resume {
+  position: relative;
+  /* animation: slideIn 1s ease forwards; */
+  z-index: 1;
+}
+
 .contact {
   padding: 3px;
   text-align: center;
   font-size: 25px;
 }
 
-.contact a {
+.contact {
   text-decoration: none;
 }
 
@@ -195,6 +212,10 @@ h2 {
   transition: transform 0.3s;
   /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
+}
+
+.contact a {
+  text-decoration: none;
 }
 
 .contact img:hover {
@@ -313,13 +334,25 @@ h2 {
 
 /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */
 
-@keyframes bottom-in {
+@keyframes bottomIn {
   0% {
     opacity: 0;
     transform: translateY(70%);
   }
 
   150% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes topIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(0%);
   }
@@ -352,6 +385,15 @@ h2 {
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
