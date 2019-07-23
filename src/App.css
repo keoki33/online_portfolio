@@ -169,12 +169,31 @@ h2 {
 .about,
 .resume,
 .projects,
-.contact {
+.contacts {
   margin-top: -70px;
   margin-left: 5vw;
   margin-right: 5vw;
   animation: slideIn 1s ease forwards;
   height: 65vh;
+}
+
+.projects h1 {
+  text-align: center;
+}
+
+.projects {
+  position: flex;
+}
+
+.youtube {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.youtubeDiv {
+  width: 300px;
+  height: 400px;
+  border: 2px solid #1c6ea4;
 }
 
 .pdf {
@@ -185,6 +204,9 @@ h2 {
 
   /* margin-left: 20%;
   margin-right: 20%; */
+}
+
+.pdfPage {
 }
 
 .resume {
