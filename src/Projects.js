@@ -27,22 +27,18 @@ class Projects extends Component {
       <div className={this.state.class}>
         <h1>Projects</h1>
         <div className="mirrorDiv">
-          <img src={require(`${this.mirrorPic()}`)} alt="" />
-
-          <p className="mirrorDesc">
-            Reflectere - A Google home voice controlled smart mirror Video Demo
-          </p>
-        </div>
-        <div className="projectDiv"> /></div>
-        <div className="projectDiv">
-          <iframe
-            title="youtube"
-            className="youtube"
-            // width="420"
-            // height="315"
-            src="https://youtube.com/embed/QoIAFNWLduA"
+          <img
+            className="mirrorPic"
+            src={require(`${this.mirrorPic()}`)}
+            alt=""
           />
+
+          <div className="mirrorDesc">
+            Reflectere - A Google home voice controlled smart mirror Video Demo
+          </div>
         </div>
+        <div className="projectDiv" />
+        <div className="projectDiv" />
       </div>
     );
   }
