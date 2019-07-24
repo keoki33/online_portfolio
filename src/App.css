@@ -167,8 +167,8 @@ h2 {
 }
 
 .about,
-.resume,
 .projects,
+.resume,
 .contacts {
   margin-top: -70px;
   margin-left: 5vw;
@@ -177,49 +177,87 @@ h2 {
   height: 65vh;
 }
 
-.mirrorDiv {
-  padding: 0px;
-  margin: 0;
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border: 2px solid #1c6ea4;
-  /* overflow: hidden; */
+.projectDivs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .projects img {
-  position: absolute;
-  height: 200px;
-  width: 200px;
+  width: 350px;
 }
 
-.mirrorDesc {
+.projects p {
+  padding: 10px;
+  margin-top: -13px;
+  /* padding-top: 0px; */
+}
+
+.mirrorDiv,
+.gameDiv,
+.recipeDiv {
+  padding: 20px;
+  margin: 0;
+  height: 262px;
+  width: 350px;
+  /* border: 2px solid #1c6ea4; */
+  /* overflow: hidden; */
+}
+
+.mirrorPic,
+.gamePic,
+.recipePic {
+  position: absolute;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+  transition: transform 0.2s;
+  z-index: 1;
+}
+
+.mirrorDesc,
+.gameDesc,
+.recipeDesc {
   opacity: 0;
+  z-index: 2;
   position: absolute;
-  height: 200px;
-  width: 200px;
-  transition: transform 0.3s;
-  line-height: 20px;
+  height: 262px;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s;
+  /* line-height: 20px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: middle; */
 }
 
-.mirrorDesc:hover {
+.mirrorDesc:hover,
+.gameDesc:hover,
+.recipeDesc:hover {
   opacity: 1;
-  animation: fadeIn 0.5s ease forwards;
-  background: rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.2s linear forwards;
+  transform: scale(1.01);
 }
 
-.mirrorDesc:hover + .mirrorPic {
-  opacity: 0.5;
+.mirrorDiv:hover .mirrorPic,
+.gameDiv:hover .gamePic,
+.recipeDiv:hover .recipePic {
+  transform: scale(1.01);
+}
+
+.gameDesc:hover {
+  /* transform: scale(1.05); */
+  opacity: 1;
+}
+
+.recipeDesc:hover {
+  /* transform: scale(1.05); */
+  opacity: 1;
 }
 
 .projects h1 {
   text-align: center;
-}
-
-.projects {
-  position: flex;
 }
 
 .pdf {
