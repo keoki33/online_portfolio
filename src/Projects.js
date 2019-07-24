@@ -107,7 +107,9 @@ class Projects extends Component {
             <div className="mirrorDesc">
               <p>
                 <h1>- Reflectere -</h1>A Google home voice controlled smart
-                mirror <br />
+                mirror. <br /> <br /> Why just look at a mirror when you can
+                talk to it. <br />
+                <br />
                 <a
                   href="https://youtu.be/A7g2VQ8CuxM"
                   target="_blank"
@@ -137,7 +139,23 @@ class Projects extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Github front-end
+                  Github mirror
+                </a>
+                {" | "}
+                <a
+                  href="https://github.com/keoki33/remote-control"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github remote
+                </a>
+                <br />
+                <a
+                  href="https://github.com/keoki33/remote-control"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github back-end
                 </a>
               </p>
             </div>
@@ -148,7 +166,45 @@ class Projects extends Component {
               src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
               alt=""
             />
-            <div className="gameDesc">Game Demo</div>
+            <div className="gameDesc">
+              {" "}
+              <p>
+                <h1>- Game -</h1> A 80’s retro theme HTML canvas game.
+                <br />
+                <br />
+                <a
+                  href="https://youtu.be/0_UtxgQkIlg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Video Demo
+                </a>
+                {" | "}
+                <a
+                  href="https://zen-hamilton-9b3aa1.netlify.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Website
+                </a>
+                {" | "}
+                <a
+                  href="https://github.com/keoki33/game_project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github front-end
+                </a>
+                <br />
+                <a
+                  href="https://github.com/keoki33/game_api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github back-end
+                </a>
+              </p>
+            </div>
           </div>
           <div className="recipeDiv">
             <img
@@ -156,7 +212,38 @@ class Projects extends Component {
               src={require(`${this.state.recipePic[this.state.recipeIndex]}`)}
               alt=""
             />
-            <div className="recipeDesc">Recipe Demo</div>
+            <div className="recipeDesc">
+              {" "}
+              <p>
+                <h1>- WTC -</h1> A recipes website allowing user to search
+                recipes by ingredients and time.
+                <br />
+                <br />
+                <a
+                  href="https://youtu.be/QoIAFNWLduA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Video Demo
+                </a>
+                {" | "}
+                <a
+                  href="https://github.com/keoki33/recipes_project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github front-end
+                </a>
+                <br />
+                <a
+                  href="https://github.com/keoki33/recipes_api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github back-end
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
