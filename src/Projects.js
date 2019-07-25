@@ -157,6 +157,39 @@ class Projects extends Component {
                 >
                   Github back-end
                 </a>
+                <br />
+                <div className="projectLogoWrapper">
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/react.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/rails.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/websocket.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/googleAssistant.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/heroku.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/netlify.png")}
+                    alt=""
+                  />
+                </div>
               </p>
             </div>
           </div>
@@ -203,6 +236,34 @@ class Projects extends Component {
                 >
                   Github back-end
                 </a>
+                <br />
+                <div className="projectLogoWrapper">
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/react.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/rails.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/canvas.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/netlify.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/heroku.png")}
+                    alt=""
+                  />
+                </div>
               </p>
             </div>
           </div>
@@ -242,6 +303,29 @@ class Projects extends Component {
                 >
                   Github back-end
                 </a>
+                <br />
+                <div className="projectLogoWrapper">
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/react.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/rails.png")}
+                    alt=""
+                  />
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/html.png")}
+                    alt=""
+                  />{" "}
+                  <img
+                    className="projectLogo"
+                    src={require("./images/skills/css.png")}
+                    alt=""
+                  />
+                </div>
               </p>
             </div>
           </div>

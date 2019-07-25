@@ -16,9 +16,9 @@ class About extends Component {
       <div className={this.state.class}>
         <h1>About</h1>
         <img
-          src={require(`./images/180.png`)}
+          src={require(`./images/gw.jpg`)}
           alt=""
-          className="facePic"
+          className="aboutPic"
         />{" "}
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
