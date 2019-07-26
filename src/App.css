@@ -145,7 +145,7 @@ a:hover {
 .content {
 }
 
-.about h1 {
+.about {
   text-align: center;
 }
 
@@ -155,6 +155,9 @@ a:hover {
   width: 300px;
 }
 
+.aboutText {
+  text-align: left;
+}
 .hobbiesPicsWrapper {
   /* width: 80%; */
   display: flex;
@@ -186,6 +189,7 @@ a:hover {
   margin-left: 5vw;
   margin-right: 5vw;
   z-index: 1;
+  text-align: center;
 }
 
 .home h1,
@@ -196,6 +200,7 @@ h2 {
 
 .skillsLogoWrapper {
   border-top: 2px solid rgba(182, 182, 182, 0.3);
+  /* border-bottom: 2px solid rgba(182, 182, 182, 0.3); */
   margin-top: 1%;
   margin: 0 auto;
   width: 90%;
@@ -233,7 +238,7 @@ h2 {
 .projects,
 .resume,
 .contacts {
-  margin-top: -70px;
+  margin-top: -60px;
   margin-left: 5vw;
   margin-right: 5vw;
   animation: slideIn 1s ease forwards;
@@ -259,7 +264,9 @@ h2 {
   justify-content: space-around;
 }
 
-.projects img {
+.projects h2 {
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .projects p {

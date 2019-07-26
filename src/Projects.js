@@ -96,7 +96,7 @@ class Projects extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h1>Projects</h1>
+        <h2>Projects</h2>
         <div className="projectDivs">
           <div className="mirrorDiv">
             <img
