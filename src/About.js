@@ -47,6 +47,28 @@ class About extends Component {
           voluptatibus cumque quam quia. Dolor odit repellendus vero aspernatur,
           harum nisi. Dolores repudiandae quia unde?
         </p>
+        <div className="hobbiesPicsWrapper">
+          <img
+            src={require(`./images/hobbies/coc.jpg`)}
+            alt=""
+            className="hobbiesPic"
+          />{" "}
+          <img
+            src={require(`./images/hobbies/code.jpg`)}
+            alt=""
+            className="hobbiesPic"
+          />{" "}
+          <img
+            src={require(`./images/hobbies/workout.png`)}
+            alt=""
+            className="hobbiesPic"
+          />{" "}
+          <img
+            src={require(`./images/hobbies/st.jpg`)}
+            alt=""
+            className="hobbiesPic"
+          />{" "}
+        </div>
       </div>
     );
   }
