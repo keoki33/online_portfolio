@@ -173,6 +173,11 @@ class Home extends Component {
             <br />
             ASE MASTER TECH
           </p>
+          <img
+            className="skillsLogoMore"
+            src={require("./images/skills/more.jpg")}
+            alt=""
+          />{" "}
         </div>
       </div>
     );
