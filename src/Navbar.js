@@ -27,8 +27,8 @@ class Navbar extends Component {
     return (
       <nav className={this.state.class}>
         {/* {console.log(window.location.pathname)} */}
-        <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "}
-        <br />
+        {/* <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "} */}
+        <img src={require(`./images/face.jpg`)} alt="" className="facePic" />{" "}
         <ul className="navLinks">
           <li>
             {" "}
