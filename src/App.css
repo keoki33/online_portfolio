@@ -68,8 +68,23 @@ nav {
 }
 
 .facePic {
-  width: 50px;
+  width: 60px;
   padding: 10px;
+  transition: transform 0.3s;
+}
+
+.facePic:hover {
+  /* transform: translateZ(1000px); */
+  /* transform: rotate3d(0, 0, 0, 0deg); */
+  /* transform: rotateX(50deg); */
+  transform: scale(1.1) !important;
+}
+
+.facePic:active {
+  /* transform: translateZ(1000px); */
+  /* transform: rotate3d(0, 0, 0, 0deg); */
+  /* transform: rotateX(50deg); */
+  animation: navSlideIn 1s ease forwards !important;
 }
 
 @media screen and (max-width: 605px) {

@@ -23,10 +23,17 @@ class App extends Component {
   whatever = () => {};
 
   mouseTrack(e) {
-    this.setState({ x: e.screenX, y: e.screenY });
-
-    this.facePic();
+    this.setState({ x: e.pageX, y: e.pageY });
+    // this.facePos();
   }
+
+  facePos = () => {
+    const pic = document.getElementById("facePic");
+    let pos = pic.getBoundingClientRect();
+    console.log(pos.left);
+    console.log(pos.top);
+    console.log(pos.width);
+  };
 
   facePic = () => {
     if (this.state.clicked) {
@@ -63,16 +70,16 @@ class App extends Component {
             this.mouseTrack(event);
           }}
         >
-          {console.log(`x: ${this.state.x} y: ${this.state.x}`)}
+          {/* {console.log(`x: ${this.state.x} y: ${this.state.y}`)} */}
           <Navbar
             x={this.state.x}
             y={this.state.y}
             facePic={this.state.facePic}
             navbarClass={this.state.navbarClass}
             handleClick={this.handleClick}
-          />
-          <Switch>
-            <div className="content">
+          />{" "}
+          <div className="content">
+            <Switch>
               <Route
                 exact
                 path={["/recipes", "/home", "/"]}
@@ -82,8 +89,8 @@ class App extends Component {
               <Route path="/projects" render={props => <Projects />} />
               <Route path="/resume" render={props => <Resume />} />
               <Route path="/contact" render={props => <Contact />} />
-            </div>
-          </Switch>
+            </Switch>{" "}
+          </div>
           {/* <Footer /> */}
         </div>
       </Router>
