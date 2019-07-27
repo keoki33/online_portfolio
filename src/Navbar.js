@@ -70,7 +70,6 @@ class Navbar extends Component {
         rY: (this.props.y - this.state.middleY) / this.state.height
       });
     }
-    else 
   };
 
   componentWillReceiveProps(nextProps) {
