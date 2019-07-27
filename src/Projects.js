@@ -107,8 +107,8 @@ class Projects extends Component {
             <div className="mirrorDesc">
               <p>
                 <h1>- Reflectere -</h1>A Google home voice controlled smart
-                mirror. <br /> <br /> Why just look at a mirror when you can
-                talk to it. <br />
+                mirror. Your very own mirror mirror on the wall, Snow White
+                would be so jealous. <br />
                 <br />
                 <a
                   href="https://youtu.be/A7g2VQ8CuxM"
@@ -225,7 +225,9 @@ class Projects extends Component {
             <div className="gameDesc">
               {" "}
               <p>
-                <h1>- Game -</h1> A 80’s retro theme HTML canvas game.
+                <h1>- Flap Run or Die -</h1> A thrilling 80’s retro theme HTML
+                canvas game. Avoid viruses and dinosaurs, the stuff of
+                nightmares.
                 <br />
                 <br />
                 <a
@@ -319,8 +321,9 @@ class Projects extends Component {
             <div className="recipeDesc">
               {" "}
               <p>
-                <h1>- WTC -</h1> A recipes website allowing user to search
-                recipes by ingredients and time.
+                <h1>- WTC -</h1> What can I cook with what I have in the fridge?
+                What if I only have 20 minutes? All this and other life
+                mysteries answered.
                 <br />
                 <br />
                 <a

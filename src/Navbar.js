@@ -121,6 +121,7 @@ class Navbar extends Component {
             </Link>
           </li>
         </ul>
+        <div className="navBorder" />
       </nav>
     );
   }

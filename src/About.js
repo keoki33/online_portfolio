@@ -35,8 +35,9 @@ class About extends Component {
             to continue to learn and grow and share my passion to code.
           </p>
           <p>
-            I'm currently working on improving my Javascript and React skills.
-            Next on my list is PWA and Swift as I believe mobile is the future.
+            I'm currently working on expanding my Javascript, React, HTML, and
+            CSS skills one website at a time. Next on my list is PWA and Swift
+            as I believe mobile is the future.
           </p>
           <p>
             If you have any questions for me or if you have any suggestions on
@@ -63,6 +64,11 @@ class About extends Component {
             />{" "}
             <img
               src={require(`./images/hobbies/st.jpg`)}
+              alt=""
+              className="hobbiesPic"
+            />{" "}
+            <img
+              src={require(`./images/hobbies/bbq.jpg`)}
               alt=""
               className="hobbiesPic"
             />{" "}

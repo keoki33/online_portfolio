@@ -24,6 +24,7 @@ class App extends Component {
 
   mouseTrack(e) {
     this.setState({ x: e.screenX, y: e.screenY });
+
     this.facePic();
   }
 
@@ -62,8 +63,10 @@ class App extends Component {
             this.mouseTrack(event);
           }}
         >
-          {/* {console.log(`x: ${this.state.x}`)} */}
+          {console.log(`x: ${this.state.x} y: ${this.state.x}`)}
           <Navbar
+            x={this.state.x}
+            y={this.state.y}
             facePic={this.state.facePic}
             navbarClass={this.state.navbarClass}
             handleClick={this.handleClick}

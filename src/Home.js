@@ -17,7 +17,7 @@ class Home extends Component {
         <h2>George Wong</h2>
         <hr />
         <h3>
-          Full Stack Developer | Proud Graduate of Flatiron Coding Bootcap 2019
+          Full Stack Developer | Proud Graduate of Flatiron Coding Bootcamp 2019
         </h3>
         <p>
           “Give a man a program, frustrate him for a day. Teach a man to
