@@ -98,14 +98,14 @@ class Projects extends Component {
       <div className={this.state.class}>
         <h2>Projects</h2>
         <div className="projectDivs">
-          <div className="mirrorDiv">
+          <div className="mirrorDiv" onTouchStart="">
             <img
               className="mirrorPic"
               src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
               alt=""
             />
             <div className="mirrorDesc">
-              <p>
+              <p className="mirrorP">
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
                 mirror. Your very own mirror mirror on the wall, Snow White
                 would be so jealous. <br /> <br />
