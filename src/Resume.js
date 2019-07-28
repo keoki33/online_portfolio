@@ -57,7 +57,7 @@ class Resume extends Component {
           className="pdf"
           file={pdfFile}
           // renderMode="canvas"
-          loading={<Loading />}
+          // loading={<Loading />}
         >
           <Page width={this.width()} className="pdfPage" pageNumber={1} />
           <Page width={this.width()} className="pdfPage" pageNumber={2} />
