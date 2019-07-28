@@ -3,6 +3,7 @@ body .link {
   padding: 0;
   margin: 0;
   color: rgb(65, 65, 65);
+  font-family: "Raleway", sans-serif;
 }
 
 .main {
@@ -300,9 +301,9 @@ h2 {
 }
 
 .projects p {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: -5px;
   text-align: center;
   /* padding-top: 0px; */
 }

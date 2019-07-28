@@ -108,7 +108,7 @@ class Projects extends Component {
               <p>
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
                 mirror. Your very own mirror mirror on the wall, Snow White
-                would be so jealous. <br />
+                would be so jealous. <br /> <br />
                 <a
                   href="https://youtu.be/A7g2VQ8CuxM"
                   target="_blank"
