@@ -280,6 +280,10 @@ h2 {
   height: 65vh;
 }
 
+.projects {
+  margin-top: -20px;
+}
+
 .projectDivs {
   margin: 0 auto;
   /* border-top: 2px solid rgba(182, 182, 182, 0.3); */
@@ -394,7 +398,7 @@ h2 {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0px;
+  margin-top: -30px;
 
   /* margin-left: 20%;
   margin-right: 20%; */
