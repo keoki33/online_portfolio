@@ -20,20 +20,20 @@ class Contact extends Component {
 
   postMessage = event => {
     event.preventDefault();
-    // fetch("https://boiling-tundra-71042.herokuapp.com/email", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     url: "",
-    //     email: "contactform@georgetlwong.com",
-    //     imageurl: "",
-    //     headline: `Email from portfolio ------ Name: ${
-    //       this.state.name
-    //     } | Email: ${this.state.email} | Message: ${this.state.message}`
-    //   })
-    // });
+    fetch("https://boiling-tundra-71042.herokuapp.com/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        url: "",
+        email: "contactform@georgetlwong.com",
+        imageurl: "",
+        headline: `Email from portfolio ------ Name: ${
+          this.state.name
+        } | Email: ${this.state.email} | Message: ${this.state.message}`
+      })
+    });
     this.setState({ response: "Thank you for saying hello!" });
     setTimeout(() => {
       this.setState({ response: "" });

@@ -107,6 +107,7 @@ nav {
     text-decoration: none;
     height: 80px;
     width: 100%;
+    margin-top: 14px;
     /* border: 2px solid #1c6ea4; */
     animation: navSlideOut 1s ease forwards;
   }
@@ -206,6 +207,7 @@ a:hover {
 .hobbiesPic {
   max-height: 100px;
   height: 50%;
+  margin-bottom: 20px;
   /* width: 8%;
   max-width: 80px; */
   padding: 5px 10px 0px 10px;
@@ -250,7 +252,7 @@ h2 {
 
 .skillsLogo {
   max-height: 65px;
-  height: 8%;
+  height: 11vh;
   /* width: 8%;
   max-width: 80px; */
   padding: 5px 30px 0px 30px;
@@ -393,6 +395,59 @@ h2 {
 
 .projects h1 {
   text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .projects h2 {
+    margin-bottom: 20px;
+  }
+
+  .projects p {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: -10px;
+  }
+
+  .projectLogo {
+    padding: 18px 2px 0px 2px;
+
+    max-height: 34px;
+  }
+
+  .mirrorDiv,
+  .gameDiv,
+  .recipeDiv {
+    margin-top: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+
+    height: 280px;
+    width: 320px;
+
+    /* overflow: hidden; */
+  }
+
+  .mirrorPic,
+  .gamePic,
+  .recipePic {
+    height: 280px;
+    width: 320px;
+    position: absolute;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+    transition: transform 0.2s;
+    z-index: 1;
+  }
+
+  .mirrorDesc,
+  .gameDesc,
+  .recipeDesc {
+    /* font-size: 10px; */
+    position: absolute;
+    height: 280px;
+    width: 320px;
+  }
 }
 
 .pdf {
