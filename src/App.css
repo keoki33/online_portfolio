@@ -443,6 +443,7 @@ h2 {
     position: absolute;
     height: 280px;
     width: 320px;
+    z-index: 3;
   }
 
   .mirrorDesc:hover,
