@@ -44,7 +44,7 @@ class About extends Component {
           </p>
         </div>
         <div>
-          <h2>In my spare time ...</h2>
+          <h2>In my spare time</h2>
           <div className="hobbiesPicsWrapper">
             <img
               src={require(`./images/hobbies/coc.jpg`)}
