@@ -390,16 +390,6 @@ h2 {
   transform: scale(1.04);
 }
 
-.gameDesc:hover {
-  /* transform: scale(1.05); */
-  opacity: 1;
-}
-
-.recipeDesc:hover {
-  /* transform: scale(1.05); */
-  opacity: 1;
-}
-
 .projects h1 {
   text-align: center;
 }
@@ -438,7 +428,6 @@ h2 {
   .mirrorPic,
   .gamePic,
   .recipePic {
-    height: 280px;
     width: 320px;
     position: absolute;
     -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
@@ -454,6 +443,20 @@ h2 {
     position: absolute;
     height: 280px;
     width: 320px;
+  }
+
+  .mirrorDesc:hover,
+  .gameDesc:hover,
+  .recipeDesc:hover {
+    opacity: 1;
+    animation: fadeIn 0.2s linear forwards;
+    transform: scale(1.04);
+  }
+
+  .mirrorDiv:hover .mirrorPic,
+  .gameDiv:hover .gamePic,
+  .recipeDiv:hover .recipePic {
+    transform: scale(1.04);
   }
 }
 
