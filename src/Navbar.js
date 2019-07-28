@@ -88,7 +88,11 @@ class Navbar extends Component {
 
   render() {
     let rotate = `rotate3d(${this.state.rY}, ${this.state.rX}, 0, 40deg)`;
-    let style = { transform: rotate };
+
+    let style = {
+      transform: rotate,
+      WebkitTransform: rotate
+    };
     return (
       <nav
         className={this.state.class}
@@ -99,19 +103,21 @@ class Navbar extends Component {
         {/* {console.log(`x: ${this.state.x} y: ${this.state.x}`)}{" "} */}
         {/* {console.log(window.location.pathname)} */}
         {/* <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "} */}
-        <img
-          onMouseEnter={event => {
-            this.setState({ rX: 0, rY: 0, hover: true });
-          }}
-          onMouseLeave={event => {
-            this.setState({ hover: false });
-          }}
-          style={style}
-          src={require(`./images/face.jpg`)}
-          alt=""
-          className="facePic"
-          id="facePic"
-        />{" "}
+        <div className="faceDiv">
+          <img
+            onMouseEnter={event => {
+              this.setState({ rX: 0, rY: 0, hover: true });
+            }}
+            onMouseLeave={event => {
+              this.setState({ hover: false });
+            }}
+            style={style}
+            src={require(`./images/face.jpg`)}
+            alt=""
+            className="facePic"
+            id="facePic"
+          />{" "}
+        </div>
         {/* {console.log(`x: ${this.state.x} y: ${this.state.x}`)} */}
         <ul className="navLinks">
           <li>
