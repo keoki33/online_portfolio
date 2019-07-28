@@ -13,7 +13,8 @@ class Navbar extends Component {
     height: 0,
     width: 0,
     rX: 0,
-    rY: 0
+    rY: 0,
+    face: ""
   };
 
   whatever = () => {};
@@ -78,6 +79,12 @@ class Navbar extends Component {
       this.facePos();
     }
   }
+
+  displayFace = () => {
+    if (this.state.class === "navbarIn") {
+      return;
+    }
+  };
 
   render() {
     let rotate = `rotate3d(${this.state.rY}, ${this.state.rX}, 0, 40deg)`;

@@ -14,8 +14,8 @@ class Home extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h2>George Wong</h2>
         <hr />
+        <h2>George Wong</h2>
         <h3>
           Full Stack Developer | Proud Graduate of Flatiron Coding Bootcamp 2019
         </h3>

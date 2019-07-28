@@ -15,11 +15,10 @@ class About extends Component {
     return (
       <div className={this.state.class}>
         <h2>About me ...</h2>
-        <img
-          src={require(`./images/gw.jpg`)}
-          alt=""
-          className="aboutPic"
-        />{" "}
+        <div className="aboutPics">
+          {/* <img src={require(`./images/gw.jpg`)} alt="" className="aboutPic" /> */}
+          <img src={require(`./images/gw2.jpg`)} alt="" className="aboutPic" />{" "}
+        </div>
         <div className="aboutText">
           <p>
             I have been many things in the past, an auto mechanic, a service
@@ -73,6 +72,11 @@ class About extends Component {
               className="hobbiesPic"
             />{" "}
           </div>
+          <h3>
+            {" "}
+            "Always code as if the guy who ends up maintaining your code will be
+            a violent psychopath who knows where you live" - John F. Woods
+          </h3>
         </div>
       </div>
     );

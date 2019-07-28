@@ -36,12 +36,12 @@ nav {
   background-color: white;
 }
 
-.navBorder {
+/* .navBorder {
   width: 70%;
   margin: 0 auto;
   border-bottom: 2px solid rgba(182, 182, 182, 0.3);
   position: relative;
-}
+} */
 
 .navLinks {
   display: flex;
@@ -136,6 +136,7 @@ a:hover {
   justify-content: space-around;
   color: rgb(32, 32, 32);
   text-decoration: none;
+  font-weight: 300;
 }
 
 .link::after {
@@ -171,12 +172,14 @@ a:hover {
 
 .about {
   text-align: center;
+  z-index: 1;
 }
 
 .aboutPic {
   float: left;
-  padding: 2%;
-  width: 300px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  max-width: 300px;
 }
 
 .aboutText {
@@ -196,6 +199,7 @@ a:hover {
   font-weight: bold;
   margin: 0 auto;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .hobbiesPic {
@@ -210,6 +214,7 @@ a:hover {
 
 .home {
   animation: bottomIn 1s ease forwards;
+  margin-top: 5%;
   margin-left: 5vw;
   margin-right: 5vw;
   z-index: 1;
@@ -239,7 +244,7 @@ h2 {
   text-align: center;
   font-size: 12px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: ;
 }
 
 .skillsLogo {
@@ -262,7 +267,7 @@ h2 {
 .projects,
 .resume,
 .contacts {
-  margin-top: -60px;
+  margin-top: 5%;
   margin-left: 5vw;
   margin-right: 5vw;
   animation: slideIn 1s ease forwards;
@@ -270,7 +275,6 @@ h2 {
 }
 
 .contact {
-  margin-top: -70px;
   margin-left: 5vw;
   margin-right: 5vw;
 
@@ -289,13 +293,13 @@ h2 {
 }
 
 .projects h2 {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .projects p {
-  padding: 10px;
-  margin-top: -13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 0px;
   text-align: center;
   /* padding-top: 0px; */
 }
@@ -326,6 +330,7 @@ h2 {
   margin-top: 8%;
   margin-left: 2%;
   margin-right: 2%;
+  margin-bottom: 10%;
   height: 262px;
   width: 350px;
   /* border: 2px solid #1c6ea4; */
@@ -576,7 +581,7 @@ h2 {
   }
 
   100% {
-    transform: translateY(-55%);
+    transform: translateY(-72%);
   }
 }
 

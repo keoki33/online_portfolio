@@ -106,7 +106,7 @@ class Projects extends Component {
             />
             <div className="mirrorDesc">
               <p>
-                <h1>- Reflectere -</h1>A Google home voice controlled smart
+                <h2>- Reflectere -</h2>A Google home voice controlled smart
                 mirror. Your very own mirror mirror on the wall, Snow White
                 would be so jealous. <br />
                 <br />
@@ -225,7 +225,7 @@ class Projects extends Component {
             <div className="gameDesc">
               {" "}
               <p>
-                <h1>- Flap Run or Die -</h1> A thrilling 80’s retro theme HTML
+                <h2>- Flap Run or Die -</h2> A thrilling 80’s retro theme HTML
                 canvas game. Avoid viruses and dinosaurs, the stuff of
                 nightmares.
                 <br />
@@ -261,6 +261,7 @@ class Projects extends Component {
                 >
                   Github back-end
                 </a>
+                <br />
                 <br />
                 <div className="projectLogoWrapper">
                   <p>
@@ -321,8 +322,8 @@ class Projects extends Component {
             <div className="recipeDesc">
               {" "}
               <p>
-                <h1>- WTC -</h1> What can I cook with what I have in the fridge?
-                What if I only have 20 minutes? All this and other life
+                <h2>- WTC -</h2> What To Cook with what you have in the fridge?
+                What if you only have 20 minutes? All this and other life's
                 mysteries answered.
                 <br />
                 <br />
@@ -350,6 +351,7 @@ class Projects extends Component {
                   Github back-end
                 </a>
                 <br />
+                <br />
                 <div className="projectLogoWrapper">
                   <p>
                     <img
@@ -369,6 +371,7 @@ class Projects extends Component {
                     <br />
                     RAILS
                   </p>
+
                   <p>
                     <img
                       className="projectLogo"
