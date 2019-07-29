@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Footer from "./Footer";
 import Loading from "./Loading";
 import pdfFile from "./images/resume.pdf";
 
@@ -62,6 +62,8 @@ class Resume extends Component {
           <Page width={this.width()} className="pdfPage" pageNumber={1} />
           <Page width={this.width()} className="pdfPage" pageNumber={2} />
         </Document>
+
+        <Footer />
       </div>
     );
   }

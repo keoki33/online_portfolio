@@ -105,12 +105,12 @@ class Navbar extends Component {
         {/* <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "} */}
         <div className="faceDiv">
           <img
-            onMouseEnter={event => {
-              this.setState({ rX: 0, rY: 0, hover: true });
-            }}
-            onMouseLeave={event => {
-              this.setState({ hover: false });
-            }}
+            // onMouseEnter={event => {
+            //   this.setState({ rX: 0, rY: 0, hover: true });
+            // }}
+            // onMouseLeave={event => {
+            //   this.setState({ hover: false });
+            // }}
             style={style}
             src={require(`./images/face.jpg`)}
             alt=""

@@ -24,7 +24,16 @@ class App extends Component {
 
   mouseTrack(e) {
     this.setState({ x: e.pageX, y: e.pageY });
-    // this.facePos();
+    // console.log(this.state.x);
+  }
+
+  touchTrack(e) {
+    this.setState({
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY
+    });
+    console.log(this.state.x);
+    console.log(this.state.y);
   }
 
   facePos = () => {
@@ -60,12 +69,9 @@ class App extends Component {
       <Router>
         <div
           className="main"
-          // onTouchStart={event => {
-          //   this.mouseTrack(event);
-          // }}
-          // onTouchEnd={event => {
-          //   this.mouseTrack(event);
-          // }}
+          onTouchStart={event => {
+            this.touchTrack(event);
+          }}
           onMouseMove={event => {
             this.mouseTrack(event);
           }}

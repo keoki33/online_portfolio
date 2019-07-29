@@ -9,7 +9,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         {/* {console.log()} */}
-        Footer
+        Copyright © George Wong 2019
       </div>
     );
   }

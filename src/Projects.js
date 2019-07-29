@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Footer from "./Footer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class Projects extends Component {
@@ -393,6 +393,7 @@ class Projects extends Component {
               </p>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     );

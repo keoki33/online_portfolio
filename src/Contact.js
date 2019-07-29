@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Footer from "./Footer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class Contact extends Component {
@@ -124,6 +124,7 @@ class Contact extends Component {
           </p>
           <button type="submit">Send</button>
         </form>
+        <Footer />
       </div>
     );
   }

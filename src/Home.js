@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Footer from "./Footer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class Home extends Component {
@@ -14,16 +14,19 @@ class Home extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <hr />
-        <h2>George Wong</h2>
-        <h3>
-          Full Stack Developer | Proud Graduate of Flatiron Coding Bootcamp 2019
-        </h3>
-        <p>
-          “Give a man a program, frustrate him for a day. Teach a man to
-          program, frustrate him for a lifetime.” ― Muhammad Waseem
-        </p>{" "}
-        <hr />
+        <div className="homeDesc">
+          <hr />
+          <h2>George Wong</h2>
+          <h3>
+            Full Stack Developer | Proud Graduate of Flatiron Coding Bootcamp
+            2019
+          </h3>
+          <p>
+            “Give a man a program, frustrate him for a day. Teach a man to
+            program, frustrate him for a lifetime.” ― Muhammad Waseem
+          </p>{" "}
+          <hr />
+        </div>
         <br />
         <h2>Skills</h2>
         <div className="skillsLogoWrapper">
@@ -176,6 +179,8 @@ class Home extends Component {
             alt=""
           />{" "}
         </div>
+
+        <Footer />
       </div>
     );
   }

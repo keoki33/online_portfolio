@@ -52,6 +52,8 @@ nav {
   margin: 0;
   margin-left: 10%;
   padding: 0;
+  height: 40px;
+  background-color: #f8f8f8;
 }
 
 .navLinks ul,
@@ -81,6 +83,8 @@ nav {
 .faceDiv {
   position: relative;
   z-index: 4;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
 }
 
 .facePic:hover {
@@ -91,10 +95,7 @@ nav {
 }
 
 .facePic:active {
-  /* transform: translateZ(1000px); */
-  /* transform: rotate3d(0, 0, 0, 0deg); */
-  /* transform: rotateX(50deg); */
-  animation: navSlideIn 1s ease forwards !important;
+  /* animation: navSlideIn 1s ease forwards !important; */
 }
 
 @media screen and (max-width: 605px) {
@@ -239,6 +240,10 @@ h2 {
   text-align: center;
   margin: 15px;
 }
+/* 
+.homeDesc {
+  background-color: #eeeeee;
+} */
 
 .skillsLogoWrapper {
   /* border-top: 2px solid rgba(182, 182, 182, 0.3); */
@@ -286,10 +291,6 @@ h2 {
   height: 65vh;
 }
 
-.contact {
-  margin-top: 0px;
-}
-
 .projects {
   margin-top: -20px;
 }
@@ -298,7 +299,7 @@ h2 {
   margin: 0 auto;
   /* border-top: 2px solid rgba(182, 182, 182, 0.3); */
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -342,7 +343,7 @@ h2 {
 .gameDiv,
 .recipeDiv {
   /* border: 2px solid #1c6ea4; */
-  margin-top: 8%;
+  margin-top: 5%;
   margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 10%;
@@ -388,7 +389,6 @@ h2 {
 .mirrorDiv:hover .mirrorPic,
 .gameDiv:hover .gamePic,
 .recipeDiv:hover .recipePic {
-  transform: scale(1.04);
 }
 
 .projects h1 {
@@ -484,9 +484,8 @@ h2 {
 } */
 
 .contact {
-  padding: 3px;
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .contact {
@@ -498,7 +497,7 @@ h2 {
   margin-right: 10px;
   text-decoration: none;
   padding: 15px;
-  width: 80px;
+  width: 75px;
   transition: transform 0.3s;
   /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
@@ -578,13 +577,13 @@ h2 {
   .contact {
     padding: 1%;
     text-align: center;
-    font-size: 4.1vw;
+    font-size: 4vw;
   }
 
   .contact img {
     text-decoration: none;
     padding: 5%;
-    width: 15vw;
+    width: 14vw;
     transition: transform 0.3s;
     /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
@@ -614,12 +613,14 @@ h2 {
 .footer {
   position: relative;
   bottom: 0;
-  background-color: rgb(167, 167, 167);
-  align-content: center;
-  width: 100%;
-  height: 3vh;
-  z-index: 2;
-  margin-top: 10vh;
+  /* background-color: rgb(167, 167, 167); */
+  text-align: left;
+  width: 90%;
+  height: 40px;
+  padding: 10px;
+  font-size: 12px;
+  border-top: 2px solid rgba(182, 182, 182, 0.3);
+  margin-top: 190px;
 }
 
 /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */
