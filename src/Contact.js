@@ -62,7 +62,7 @@ class Contact extends Component {
           <img src={require("./images/email.svg")} alt="" className="facePic" />{" "}
         </a>
         <a
-          href="https://linkedin.com/in/george-wong-515470168"
+          href="www.linkedin.com/in/georgetlwong"
           target="_blank"
           rel="noopener noreferrer"
         >
