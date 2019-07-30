@@ -480,22 +480,26 @@ h2 {
   }
 }
 
-.pdf {
-  position: relative;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -30px;
-  z-index: 1;
-  /* margin-left: 20%;
-  margin-right: 20%; */
-}
-
 .resume {
   position: relative;
 
+  /* width: 100%; */
+  text-align: center;
   /* animation: slideIn 1s ease forwards; */
   z-index: 1;
+}
+
+.pdf {
+  position: relative;
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  margin-top: -30px;
+  z-index: 1;
+  /* margin-left: 23vw;
+  margin-right: 23vw; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* canvas {
