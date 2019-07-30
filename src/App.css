@@ -160,7 +160,7 @@ a:hover {
   left: 50%;
   width: 0;
   height: 2px;
-  border-bottom: 2px solid rgb(0, 17, 255);
+  border-bottom: 2px solid rgb(56, 56, 56);
 }
 
 .link,
@@ -169,7 +169,7 @@ a:hover {
 }
 
 .link:hover {
-  color: rgb(0, 17, 255);
+  color: rgb(0, 0, 0);
   transform: scale(1.1);
 }
 
@@ -304,6 +304,7 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  /* background-color: #f8f8f8; */
 }
 
 .projects h2 {
