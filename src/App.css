@@ -37,13 +37,6 @@ nav {
   background-color: white;
 }
 
-/* .navBorder {
-  width: 70%;
-  margin: 0 auto;
-  border-bottom: 2px solid rgba(182, 182, 182, 0.3);
-  position: relative;
-} */
-
 .navLinks {
   display: flex;
   justify-content: space-evenly;
@@ -372,8 +365,9 @@ h2 {
   position: absolute;
   height: 286px;
   width: 381px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   transition: transform 0.2s;
+  font-weight: bold;
   /* line-height: 20px;
   display: inline-block;
   vertical-align: middle; */
@@ -390,10 +384,27 @@ h2 {
 .mirrorDiv:hover .mirrorPic,
 .gameDiv:hover .gamePic,
 .recipeDiv:hover .recipePic {
+  transform: scale(1.04);
 }
 
 .projects h1 {
   text-align: center;
+}
+
+.border {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 2px solid rgba(182, 182, 182, 0.3);
+  position: relative;
+}
+
+.borderB {
+  width: 90%;
+  margin: 0 auto;
+
+  border-top: 2px solid rgba(182, 182, 182, 0.3);
+  position: relative;
+  margin-top: -60px;
 }
 
 @media screen and (max-width: 450px) {
@@ -458,6 +469,10 @@ h2 {
   .gameDesc h2,
   .recipeDesc h2 {
     margin-bottom: 8px;
+  }
+
+  .borderB {
+    margin-top: 20px;
   }
 }
 

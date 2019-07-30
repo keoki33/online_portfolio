@@ -96,7 +96,7 @@ class Projects extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h2>Projects</h2>
+        <h2>Projects</h2> <div className="border" />
         <div className="projectDivs">
           <div className="mirrorDiv" onTouchStart="">
             <img
@@ -393,6 +393,7 @@ class Projects extends Component {
               </p>
             </div>
           </div>
+          <div className="borderB" />
           <Footer />
         </div>
       </div>
