@@ -72,6 +72,9 @@ class App extends Component {
           onTouchStart={event => {
             this.touchTrack(event);
           }}
+          onTouchMove={event => {
+            this.touchTrack(event);
+          }}
           onMouseMove={event => {
             this.mouseTrack(event);
           }}
