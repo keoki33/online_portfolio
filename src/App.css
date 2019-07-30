@@ -192,6 +192,12 @@ a:hover {
   max-width: 300px;
 }
 
+@media screen and (max-width: 580px) {
+  .aboutPic {
+    max-width: 50%;
+  }
+}
+
 .aboutText {
   text-align: left;
 }

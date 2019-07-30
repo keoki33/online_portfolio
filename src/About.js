@@ -19,6 +19,7 @@ class About extends Component {
           {/* <img src={require(`./images/gw.jpg`)} alt="" className="aboutPic" /> */}
           <img src={require(`./images/gw2.jpg`)} alt="" className="aboutPic" />{" "}
         </div>
+
         <div className="aboutText">
           <p>
             I have been many things in the past, an auto mechanic, a service
