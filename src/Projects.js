@@ -353,8 +353,6 @@ class Projects extends Component {
                 >
                   Github back-end
                 </a>
-                <br />
-                <br />
                 <div className="projectLogoWrapper">
                   <p>
                     <img
