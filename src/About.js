@@ -21,9 +21,9 @@ class About extends Component {
 
         <div className="aboutText">
           <p>
-            I have been many things in the past, an auto mechanic, a service
-            advisor, a waiter, parking valet, apartment manager, and tech
-            support.
+            I have been many things in the past - an auto mechanic, an
+            automotive service advisor, a waiter, parking valet, apartment
+            manager, and tech support.
           </p>
           <p>
             But what I have always wanted to be was a programmer. Ever since I

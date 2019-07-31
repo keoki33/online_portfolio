@@ -107,8 +107,8 @@ class Projects extends Component {
             <div className="mirrorDesc">
               <div className="descText">
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
-                mirror. Your very own mirror mirror on the wall, Snow White
-                would be so jealous. <br /> <br />
+                mirror. Your very own mirror mirror on the wall. Snow White
+                would be so jealous! <br /> <br />
                 <a
                   href="https://youtu.be/A7g2VQ8CuxM"
                   target="_blank"
@@ -122,7 +122,7 @@ class Projects extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Mirror
+                  Smart Mirror
                 </a>
                 {" | "}
                 <a
