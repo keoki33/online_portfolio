@@ -122,7 +122,7 @@ class Projects extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Smart Mirror
+                  Mirror
                 </a>
                 {" | "}
                 <a
