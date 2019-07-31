@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class Contact extends Component {
   state = {
@@ -39,10 +38,6 @@ class Contact extends Component {
       this.setState({ response: "" });
     }, 2000);
     this.setState({ name: "", email: "", message: "" });
-  };
-
-  whatever = () => {
-    let whatever = "whatever";
   };
 
   test = event => {

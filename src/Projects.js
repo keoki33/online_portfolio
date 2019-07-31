@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class Projects extends Component {
   state = {
@@ -98,14 +97,15 @@ class Projects extends Component {
       <div className={this.state.class}>
         <h2>Projects</h2> <div className="border" />
         <div className="projectDivs">
-          <div className="mirrorDiv" onTouchStart="">
+          <div className="mirrorDiv" onTouchStart={console.log()}>
+            {/* for safari compability */}
             <img
               className="mirrorPic"
               src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
               alt=""
             />
             <div className="mirrorDesc">
-              <p className="mirrorP">
+              <div className="descText">
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
                 mirror. Your very own mirror mirror on the wall, Snow White
                 would be so jealous. <br /> <br />
@@ -212,7 +212,7 @@ class Projects extends Component {
                     NETLIFY
                   </p>
                 </div>
-              </p>
+              </div>
             </div>
           </div>
           <div className="gameDiv">
@@ -223,7 +223,7 @@ class Projects extends Component {
             />
             <div className="gameDesc">
               {" "}
-              <p>
+              <div className="descText">
                 <h2>- Flap Run or Die -</h2> A thrilling 80’s retro theme HTML
                 canvas game. Avoid viruses and dinosaurs, the stuff of
                 nightmares.
@@ -309,7 +309,7 @@ class Projects extends Component {
                     HEROKU
                   </p>
                 </div>
-              </p>
+              </div>
             </div>
           </div>
           <div className="recipeDiv">
@@ -320,7 +320,7 @@ class Projects extends Component {
             />
             <div className="recipeDesc">
               {" "}
-              <p>
+              <div className="descText">
                 <h2>- WTC -</h2> What To Cook with what you have in the fridge?
                 What if you only have 20 minutes? All this and other life's
                 mysteries answered.
@@ -390,7 +390,7 @@ class Projects extends Component {
                     CSS
                   </p>
                 </div>
-              </p>
+              </div>
             </div>
           </div>
           <div className="borderB" />

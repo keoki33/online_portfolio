@@ -314,7 +314,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.projects p {
+.descText {
   padding-left: 8px;
   padding-right: 8px;
   margin-top: -5px;
@@ -422,7 +422,7 @@ h2 {
     margin-bottom: 20px;
   }
 
-  .projects p {
+  .descText {
     padding-left: 4px;
     padding-right: 4px;
     margin-top: -10px;

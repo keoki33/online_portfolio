@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
-import Loading from "./Loading";
+
 import pdfFile from "./images/resume.pdf";
 
 import { Document, Page } from "react-pdf";
@@ -48,7 +48,7 @@ class Resume extends Component {
   };
 
   render() {
-    const { pageNumber, numPages } = this.state;
+    // const { pageNumber, numPages } = this.state;
 
     return (
       <div className={this.state.class}>

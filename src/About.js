@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class About extends Component {
   state = { class: "about" };

@@ -7,9 +7,8 @@ import About from "./About";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
-import Footer from "./Footer";
 
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -32,17 +31,9 @@ class App extends Component {
       x: e.touches[0].clientX,
       y: e.touches[0].clientY
     });
-    console.log(this.state.x);
-    console.log(this.state.y);
+    // console.log(this.state.x);
+    // console.log(this.state.y);
   }
-
-  facePos = () => {
-    const pic = document.getElementById("facePic");
-    let pos = pic.getBoundingClientRect();
-    console.log(pos.left);
-    console.log(pos.top);
-    console.log(pos.width);
-  };
 
   facePic = () => {
     if (this.state.clicked) {

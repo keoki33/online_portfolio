@@ -17,8 +17,6 @@ class Navbar extends Component {
     face: ""
   };
 
-  whatever = () => {};
-
   smile = () => {
     if (this.state.hover) {
       return "./images/smile.jpg";
@@ -63,7 +61,7 @@ class Navbar extends Component {
   };
 
   facePos = () => {
-    if (this.state.hover == false) {
+    if (this.state.hover === false) {
       this.setState({
         rX:
           (this.props.x - this.state.middleX) /
