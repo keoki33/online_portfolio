@@ -41,7 +41,7 @@ class Resume extends Component {
 
   width = () => {
     if (this.state.width > 850) {
-      return "780";
+      return 780;
     } else {
       return this.state.width * 0.9;
     }

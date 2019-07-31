@@ -87,7 +87,7 @@ class Navbar extends Component {
   };
 
   render() {
-    let rotate = `rotate3d(${this.state.rY}, ${this.state.rX}, 0, 40deg)`;
+    let rotate = `rotate3d(${this.state.rY}, ${this.state.rX}, 0, 50deg)`;
 
     let style = {
       transform: rotate,
