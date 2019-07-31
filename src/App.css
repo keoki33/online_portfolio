@@ -419,7 +419,7 @@ h2 {
 
 @media screen and (max-width: 450px) {
   .projects h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .descText {
