@@ -45,9 +45,9 @@ class Navbar extends Component {
     const pic = document.getElementById("facePic");
     let pos = pic.getBoundingClientRect();
     // console.log(pos.left);
-    console.log(pos.top);
+    // console.log(pos.top);
     // console.log(pos.width);
-    console.log(pos.height);
+    // console.log(pos.height);
     // console.log(
     //   `middle x=${pos.left + pos.width * 0.5} y=${Math.abs(pos.top)}`
     // );
@@ -57,7 +57,7 @@ class Navbar extends Component {
       width: window.innerWidth,
       height: window.innerHeight
     });
-    console.log(this.state.width);
+    // console.log(this.state.width);
   };
 
   facePos = () => {

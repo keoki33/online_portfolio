@@ -182,7 +182,9 @@ class Projects extends Component {
                       src={require("./images/skills/websocket.png")}
                       alt=""
                     />
-                    <br /> ACTION CABLE
+                    <br /> ACTION
+                    <br />
+                    CABLE
                   </p>
                   <p>
                     <img
@@ -191,7 +193,9 @@ class Projects extends Component {
                       alt=""
                     />
                     <br />
-                    GOOGLE ASSISTANT
+                    GOOGLE
+                    <br />
+                    ASSISTANT
                   </p>
                   <p>
                     <img
