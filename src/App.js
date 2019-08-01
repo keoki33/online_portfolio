@@ -7,6 +7,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
+import ProjectsV2 from "./ProjectsV2";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

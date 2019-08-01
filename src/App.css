@@ -353,7 +353,7 @@ h2 {
   margin-bottom: 10%;
   height: 286px;
   width: 381px;
-
+  z-index: 2;
   /* overflow: hidden; */
 }
 
@@ -365,6 +365,7 @@ h2 {
   -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
   transition: transform 0.2s;
+  z-index: 2;
 }
 
 .mirrorDesc,
@@ -415,6 +416,19 @@ h2 {
   border-top: 2px solid rgba(182, 182, 182, 0.3);
   position: relative;
   margin-top: -60px;
+}
+
+.monitors {
+  /* position: relative; */
+}
+
+.monitor {
+  width: 410px;
+  position: absolute;
+  margin-left: -10px;
+  bottom: -60px;
+  height: 480px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 450px) {
