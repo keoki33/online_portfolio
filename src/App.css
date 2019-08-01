@@ -15,10 +15,6 @@ body .link {
 
 /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */ /* NAVBAR */
 
-.link {
-  /* text-align: justify; */
-}
-
 nav {
   margin: 0 auto;
   position: relative;
@@ -177,8 +173,7 @@ a:hover {
 
 /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */ /* CONTENT */
 
-.content {
-}
+/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
 
 .about {
   text-align: center;
@@ -228,6 +223,8 @@ a:hover {
   /* padding-left: 10px;
   padding-right: 10px; */
 }
+
+/* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */
 
 .home {
   animation: bottomIn 1s ease forwards;
@@ -284,6 +281,8 @@ h2 {
   padding: 5px 30px 0px 30px;
 }
 
+/* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */
+
 .about,
 .projects,
 .resumes,
@@ -293,6 +292,8 @@ h2 {
   animation: slideIn 1s ease forwards;
   height: 65vh;
 }
+
+/* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */
 
 .projects {
   margin-top: -20px;
@@ -500,12 +501,11 @@ h2 {
   }
 }
 
+/* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */
+
 .resume {
   position: relative;
-
-  /* width: 100%; */
   text-align: center;
-  /* animation: slideIn 1s ease forwards; */
   z-index: 1;
 }
 
@@ -516,16 +516,11 @@ h2 {
   display: inline-block;
   margin-top: -30px;
   z-index: 1;
-  /* margin-left: 23vw;
-  margin-right: 23vw; */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* canvas {
-  position: relative;
-  z-index: 1;
-} */
+/* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */
 
 .contact {
   text-align: center;
@@ -654,10 +649,12 @@ h2 {
   }
 }
 
+/* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */
+
 .footer {
   position: relative;
   bottom: 0;
-  /* background-color: rgb(167, 167, 167); */
+
   text-align: left;
   width: 90%;
   height: 40px;
