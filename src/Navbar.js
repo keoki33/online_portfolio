@@ -109,6 +109,9 @@ class Navbar extends Component {
             // onMouseLeave={event => {
             //   this.setState({ hover: false });
             // }}
+            onClick={() => {
+              console.log("please stop clicking me");
+            }}
             style={style}
             src={require(`./images/face.jpg`)}
             alt=""
