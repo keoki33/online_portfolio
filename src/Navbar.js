@@ -14,7 +14,8 @@ class Navbar extends Component {
     width: 0,
     rX: 0,
     rY: 0,
-    face: ""
+    face: "",
+    faceClass: "facePic"
   };
 
   smile = () => {
@@ -84,6 +85,14 @@ class Navbar extends Component {
     }
   };
 
+  animateFace = () => {
+    console.log("please stop clicking me");
+    this.setState({ faceClass: "facePic animate" });
+    setTimeout(() => {
+      this.setState({ faceClass: "facePic" });
+    }, 1000);
+  };
+
   render() {
     let rotate = `rotate3d(${this.state.rY}, ${this.state.rX}, 0, 50deg)`;
 
@@ -110,12 +119,12 @@ class Navbar extends Component {
             //   this.setState({ hover: false });
             // }}
             onClick={() => {
-              console.log("please stop clicking me");
+              this.animateFace();
             }}
             style={style}
             src={require(`./images/face.jpg`)}
             alt=""
-            className="facePic"
+            className={this.state.faceClass}
             id="facePic"
           />{" "}
         </div>
