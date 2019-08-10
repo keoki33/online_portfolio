@@ -10,6 +10,8 @@ class About extends Component {
     this.setState({ class: "about" });
   }
 
+  componentWillUnmount() {}
+
   render() {
     return (
       <div className={this.state.class}>

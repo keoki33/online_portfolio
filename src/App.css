@@ -188,6 +188,10 @@ a:hover {
   max-width: 300px;
 }
 
+.about.out {
+  animation: slideOut 1s ease forwards;
+}
+
 @media screen and (max-width: 580px) {
   .aboutPic {
     max-width: 50%;
@@ -719,6 +723,17 @@ h2 {
   100% {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 
