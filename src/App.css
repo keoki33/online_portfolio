@@ -276,38 +276,43 @@ h2 {
 /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */
 
 .content {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .about,
+.contact,
 .projects {
   position: absolute;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  /* height: 65vh; */
-}
-
-.contact {
-  position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  /* top: -5%; */
   margin-left: 5vw;
   margin-right: 5vw;
-  /* height: 65vh; */
-}
-
-.animation-enter-active {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-left: 5vw;
   animation: slideIn 1s ease forwards;
+  /* height: 65vh; */
+}
+
+/* .contact {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+ 
+  top: -7%;
+} */
+
+.animation-enter {
+  animation: slideIn 1s ease forwards;
+}
+
+.animation-enter-done {
 }
 
 .animation-exit {
@@ -329,6 +334,14 @@ h2 {
   margin-right: 5vw;
   z-index: 2;
   text-align: center;
+}
+
+.resume.animation-enter {
+  animation: none;
+}
+
+.resume.animation-exit {
+  /* animation: none; */
 }
 
 /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */
@@ -778,6 +791,15 @@ h2 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
