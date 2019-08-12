@@ -319,6 +319,15 @@ h2 {
   animation: slideOut 1s ease forwards;
 }
 
+.home {
+  margin-top: 5%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  z-index: 2;
+  text-align: center;
+  animation: bottomIn 1s ease forwards;
+}
+
 .home.animation-enter-active {
   animation: bottomIn 1s ease forwards;
   margin-top: 5%;
@@ -328,13 +337,8 @@ h2 {
   text-align: center;
 }
 
-.home {
-  margin-top: 5%;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  z-index: 2;
-  text-align: center;
-  animation: bottomIn 1s ease forwards;
+.home.animation-exit {
+  animation: slideOut 1s ease forwards;
 }
 
 .resume.animation-enter {
