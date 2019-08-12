@@ -334,6 +334,7 @@ h2 {
   margin-right: 5vw;
   z-index: 2;
   text-align: center;
+  animation: bottomIn 1s ease forwards;
 }
 
 .resume.animation-enter {
