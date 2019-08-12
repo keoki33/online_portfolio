@@ -188,10 +188,6 @@ a:hover {
   max-width: 300px;
 }
 
-.about.out {
-  animation: slideOut 1s ease forwards;
-}
-
 @media screen and (max-width: 580px) {
   .aboutPic {
     max-width: 50%;
@@ -230,15 +226,6 @@ a:hover {
 }
 
 /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */
-
-.home {
-  animation: bottomIn 1s ease forwards;
-  margin-top: 5%;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  z-index: 1;
-  text-align: center;
-}
 
 .home h1,
 h2 {
@@ -288,14 +275,60 @@ h2 {
 
 /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */
 
+.content {
+  position: relative;
+}
+
 .about,
-.projects,
-.resumes,
-.contact {
+.projects {
+  position: absolute;
   margin-left: 5vw;
   margin-right: 5vw;
+  /* height: 65vh; */
+}
+
+.contact {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  /* height: 65vh; */
+}
+
+.animation-enter-active {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
   animation: slideIn 1s ease forwards;
-  height: 65vh;
+}
+
+.animation-exit {
+  animation: slideOut 1s ease forwards;
+}
+
+.home.animation-enter-active {
+  animation: bottomIn 1s ease forwards;
+  margin-top: 5%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  z-index: 1;
+  text-align: center;
+}
+
+.home {
+  margin-top: 5%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  z-index: 2;
+  text-align: center;
 }
 
 /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */
@@ -718,10 +751,12 @@ h2 {
 @keyframes slideIn {
   0% {
     transform: translateX(-100%);
+
     opacity: 0;
   }
   100% {
     transform: translateX(0%);
+
     opacity: 1;
   }
 }

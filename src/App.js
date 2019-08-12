@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./App.css";
 import Navbar from "./Navbar";
@@ -59,40 +60,61 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div
-          className="main"
-          onTouchStart={event => {
-            this.touchTrack(event);
-          }}
-          onTouchMove={event => {
-            this.touchTrack(event);
-          }}
-          onMouseMove={event => {
-            this.mouseTrack(event);
-          }}
-        >
-          {/* {console.log(`x: ${this.state.x} y: ${this.state.y}`)} */}
-          <Navbar
-            x={this.state.x}
-            y={this.state.y}
-            facePic={this.state.facePic}
-            navbarClass={this.state.navbarClass}
-            handleClick={this.handleClick}
-          />{" "}
-          <div className="content">
-            <Switch>
-              <Route
-                exact
-                path={["/recipes", "/home", "/"]}
-                render={props => <Home />}
-              />
-              <Route path="/about" render={props => <About />} />
-              <Route path="/projects" render={props => <Projects />} />
-              <Route path="/resume" render={props => <Resume />} />
-              <Route path="/contact" render={props => <Contact />} />
-            </Switch>{" "}
-          </div>
-          {/* <Footer /> */}
+        <div className="app">
+          <Route
+            render={({ location }) => {
+              return (
+                <div
+                  className="main"
+                  onTouchStart={event => {
+                    this.touchTrack(event);
+                  }}
+                  onTouchMove={event => {
+                    this.touchTrack(event);
+                  }}
+                  onMouseMove={event => {
+                    this.mouseTrack(event);
+                  }}
+                >
+                  {/* {console.log(`x: ${this.state.x} y: ${this.state.y}`)} */}
+                  <Navbar
+                    x={this.state.x}
+                    y={this.state.y}
+                    facePic={this.state.facePic}
+                    navbarClass={this.state.navbarClass}
+                    handleClick={this.handleClick}
+                  />
+                  <div className="content">
+                    <TransitionGroup component={null}>
+                      <CSSTransition
+                        key={location.key}
+                        classNames="animation"
+                        timeout={1000}
+                      >
+                        <Switch location={location}>
+                          <Route
+                            exact
+                            path={["/home", "/"]}
+                            render={props => <Home />}
+                          />
+                          <Route path="/about" render={props => <About />} />
+                          <Route
+                            path="/projects"
+                            render={props => <Projects />}
+                          />
+                          <Route path="/resume" render={props => <Resume />} />
+                          <Route
+                            path="/contact"
+                            render={props => <Contact />}
+                          />
+                        </Switch>
+                      </CSSTransition>
+                    </TransitionGroup>
+                  </div>
+                </div>
+              );
+            }}
+          />
         </div>
       </Router>
     );
