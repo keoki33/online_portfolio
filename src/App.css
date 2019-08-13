@@ -302,7 +302,7 @@ h2 {
   height: 130%;
 }
 
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1367px) {
   .projectBack {
     height: 130vh;
   }
