@@ -95,7 +95,12 @@ class Projects extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h2>Projects</h2> <div className="border" />
+        <h2>My journey so far ...</h2> <div className="border" />
+        <img
+          className="projectBack"
+          src={require(`./images/matrix.jpg`)}
+          alt=""
+        />
         <div className="projectDivs">
           <div className="mirrorDiv" onTouchStart={console.log()}>
             {/* for safari compability */}
@@ -395,6 +400,7 @@ class Projects extends Component {
               </div>
             </div>
           </div>
+
           <div className="borderB" />
           <Footer />
         </div>

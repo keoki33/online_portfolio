@@ -293,7 +293,31 @@ h2 {
   margin-left: 5vw;
   margin-right: 5vw;
   animation: slideIn 1s ease forwards;
-  /* height: 65vh; */
+  height: 50vh;
+}
+
+.projectBack {
+  position: absolute;
+  width: 100%;
+  height: 130%;
+}
+
+@media screen and (max-width: 1368px) {
+  .projectBack {
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projectBack {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .projectBack {
+    height: 120vh;
+  }
 }
 
 /* .contact {
@@ -304,18 +328,23 @@ h2 {
   right: 0;
   margin-left: 5vw;
   margin-right: 5vw;
- 
+
   top: -7%;
 } */
 
-.animation-enter {
+.about.animation-enter,
+.contact.animation-enter,
+.projects.animation-enter {
   animation: slideIn 1s ease forwards;
 }
 
 .animation-enter-done {
 }
 
-.animation-exit {
+.about.animation-exit,
+.contact.animation-exit,
+.projects.animation-exit,
+.resume.animation-exit {
   animation: slideOut 1s ease forwards;
 }
 
@@ -325,6 +354,7 @@ h2 {
   margin-right: 5vw;
   z-index: 2;
   text-align: center;
+  height: 100vh;
   animation: bottomIn 1s ease forwards;
 }
 
@@ -359,7 +389,7 @@ h2 {
   margin: 0 auto;
   /* border-top: 2px solid rgba(182, 182, 182, 0.3); */
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -469,10 +499,10 @@ h2 {
 .borderB {
   width: 90%;
   margin: 0 auto;
-
-  border-top: 2px solid rgba(182, 182, 182, 0.3);
+  /* 
+  border-top: 2px solid rgba(182, 182, 182, 0.3); */
   position: relative;
-  margin-top: -60px;
+  /* margin-top: -60px; */
 }
 
 .monitors {
@@ -709,15 +739,15 @@ h2 {
 
 .footer {
   position: relative;
-  bottom: 0;
+  bottom: 0px;
 
   text-align: left;
-  width: 90%;
+  width: 100%;
   height: 40px;
   padding: 10px;
   font-size: 12px;
   border-top: 2px solid rgba(182, 182, 182, 0.3);
-  margin-top: 190px;
+  margin-top: 150px;
 }
 
 /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */ /* ANIMATION */
