@@ -98,7 +98,7 @@ class Projects extends Component {
         <h2>My journey so far</h2> <div className="border" />
         <img
           className="projectBack"
-          src={require(`./images/matrix.jpg`)}
+          src={require(`./images/matrix1.jpg`)}
           alt=""
         />
         <div className="projectDivs">

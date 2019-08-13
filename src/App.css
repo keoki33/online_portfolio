@@ -449,8 +449,8 @@ h2 {
 .recipePic {
   width: 380px;
   position: absolute;
-  -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(120, 120, 120, 0.77);
+  box-shadow: 5px 5px 15px 0px rgba(120, 120, 120, 0.77);
   transition: transform 0.2s;
   z-index: 2;
 }
@@ -554,8 +554,8 @@ h2 {
   .recipePic {
     width: 320px;
     position: absolute;
-    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(120, 120, 120, 0.77);
+    box-shadow: 5px 5px 15px 0px rgba(120, 120, 120, 0.77);
     transition: transform 0.2s;
     z-index: 1;
   }
@@ -584,6 +584,10 @@ h2 {
 
   .borderB {
     margin-top: 20px;
+  }
+
+  .projectBack {
+    height: 105vh;
   }
 }
 
