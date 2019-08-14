@@ -232,10 +232,9 @@ h2 {
   text-align: center;
   margin: 15px;
 }
-/* 
+
 .homeDesc {
-  background-color: #eeeeee;
-} */
+}
 
 .skillsLogoWrapper {
   /* border-top: 2px solid rgba(182, 182, 182, 0.3); */
@@ -361,7 +360,7 @@ h2 {
 }
 
 .home {
-  margin-top: 5%;
+  margin-top: 50px;
   margin-left: 5vw;
   margin-right: 5vw;
   z-index: 2;
@@ -372,11 +371,6 @@ h2 {
 
 .home.animation-enter-active {
   animation: bottomIn 1s ease forwards;
-  margin-top: 5%;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  z-index: 1;
-  text-align: center;
 }
 
 .home.animation-exit {
