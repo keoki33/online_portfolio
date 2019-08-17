@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Projects extends Component {
   state = {
@@ -106,11 +107,18 @@ class Projects extends Component {
         <div className="projectDivs">
           <div className="mirrorDiv" onTouchStart={console.log()}>
             {/* for safari compability */}
-            <img
-              className="mirrorPic"
-              src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
-              alt=""
-            />
+            <CSSTransition
+              key={this.state.mirrorPic[this.state.mirrorIndex]}
+              classNames="carousel"
+              timeout={1000}
+              in={this.state.mirrorPic[this.state.mirrorIndex]}
+            >
+              <img
+                className="mirrorPic"
+                src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
             <div className="mirrorDesc">
               <div className="descText">
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
