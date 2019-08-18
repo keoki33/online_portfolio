@@ -344,7 +344,7 @@ h2 {
 
 .carousel-enter-done {
   animation: fadeOut 1s ease forwards;
-  animation-delay: 2.7s;
+  animation-delay: 2.5s;
 }
 
 .carousel-exit {
