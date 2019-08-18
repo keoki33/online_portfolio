@@ -125,7 +125,7 @@ class Projects extends Component {
             {/* for safari compability */}
             <SwitchTransition mode={"in-out"}>
               <CSSTransition
-                key={this.state.mirrorPic[this.state.mirrorIndex]}
+                key={this.state.mirrorIndex}
                 classNames="carousel"
                 timeout={1000}
               >
@@ -256,7 +256,7 @@ class Projects extends Component {
           <div className="gameDiv">
             <SwitchTransition mode={"in-out"}>
               <CSSTransition
-                key={this.state.mirrorPic[this.state.mirrorIndex]}
+                key={this.state.gameIndex}
                 classNames="carousel"
                 timeout={1000}
               >
@@ -361,7 +361,7 @@ class Projects extends Component {
           <div className="recipeDiv">
             <SwitchTransition mode={"in-out"}>
               <CSSTransition
-                key={this.state.mirrorPic[this.state.mirrorIndex]}
+                key={this.state.recipeIndex}
                 classNames="carousel"
                 timeout={1000}
               >
