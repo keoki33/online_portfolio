@@ -338,6 +338,19 @@ h2 {
   top: -7%;
 } */
 
+.carousel-enter {
+  animation: fadeIn 1s ease forwards;
+}
+
+.carousel-enter-done {
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.carousel-exit {
+  animation: fadeOut 1s ease forwards;
+}
+
 .about.animation-enter,
 .contact.animation-enter,
 .projects.animation-enter {
@@ -395,6 +408,7 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+
   /* background-color: #f8f8f8; */
 }
 
@@ -442,7 +456,7 @@ h2 {
   height: 286px;
   width: 381px;
   z-index: 2;
-  /* overflow: hidden; */
+  background-color: rgb(36, 36, 36);
 }
 
 .mirrorPic,

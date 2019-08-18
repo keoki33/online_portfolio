@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import {
+  TransitionGroup,
+  CSSTransition,
+  SwitchTransition
+} from "react-transition-group";
 
 class Projects extends Component {
   state = {
@@ -46,7 +50,8 @@ class Projects extends Component {
     ],
     mirrorIndex: 0,
     gameIndex: 0,
-    recipeIndex: 0
+    recipeIndex: 0,
+    switch: true
   };
 
   componentDidMount() {
@@ -71,7 +76,8 @@ class Projects extends Component {
       this.setState({ mirrorIndex: 0 });
     }
     this.setState({
-      mirrorIndex: this.state.mirrorIndex + 1
+      mirrorIndex: this.state.mirrorIndex + 1,
+      switch: true
     });
   };
 
@@ -93,6 +99,16 @@ class Projects extends Component {
     });
   };
 
+  image = () => {
+    return (
+      <img
+        className="mirrorPic"
+        src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
+        alt=""
+      />
+    );
+  };
+
   render() {
     return (
       <div className={this.state.class}>
@@ -107,18 +123,21 @@ class Projects extends Component {
         <div className="projectDivs">
           <div className="mirrorDiv" onTouchStart={console.log()}>
             {/* for safari compability */}
-            <CSSTransition
-              key={this.state.mirrorPic[this.state.mirrorIndex]}
-              classNames="carousel"
-              timeout={1000}
-              in={this.state.mirrorPic[this.state.mirrorIndex]}
-            >
-              <img
-                className="mirrorPic"
-                src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
-                alt=""
-              />
-            </CSSTransition>
+            <SwitchTransition mode={"in-out"}>
+              <CSSTransition
+                key={this.state.mirrorPic[this.state.mirrorIndex]}
+                classNames="carousel"
+                timeout={1000}
+              >
+                <img
+                  className="mirrorPic"
+                  src={require(`${
+                    this.state.mirrorPic[this.state.mirrorIndex]
+                  }`)}
+                  alt=""
+                />
+              </CSSTransition>
+            </SwitchTransition>
             <div className="mirrorDesc">
               <div className="descText">
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
@@ -235,11 +254,19 @@ class Projects extends Component {
             </div>
           </div>
           <div className="gameDiv">
-            <img
-              className="gamePic"
-              src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
-              alt=""
-            />
+            <SwitchTransition mode={"in-out"}>
+              <CSSTransition
+                key={this.state.mirrorPic[this.state.mirrorIndex]}
+                classNames="carousel"
+                timeout={1000}
+              >
+                <img
+                  className="gamePic"
+                  src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
+                  alt=""
+                />
+              </CSSTransition>
+            </SwitchTransition>
             <div className="gameDesc">
               {" "}
               <div className="descText">
@@ -332,11 +359,21 @@ class Projects extends Component {
             </div>
           </div>
           <div className="recipeDiv">
-            <img
-              className="recipePic"
-              src={require(`${this.state.recipePic[this.state.recipeIndex]}`)}
-              alt=""
-            />
+            <SwitchTransition mode={"in-out"}>
+              <CSSTransition
+                key={this.state.mirrorPic[this.state.mirrorIndex]}
+                classNames="carousel"
+                timeout={1000}
+              >
+                <img
+                  className="recipePic"
+                  src={require(`${
+                    this.state.recipePic[this.state.recipeIndex]
+                  }`)}
+                  alt=""
+                />
+              </CSSTransition>
+            </SwitchTransition>
             <div className="recipeDesc">
               {" "}
               <div className="descText">
