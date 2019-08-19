@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
+import ToggleSwitch from "./ToggleSwitch";
+
 import {
   TransitionGroup,
   CSSTransition,
@@ -51,7 +53,7 @@ class Projects extends Component {
     mirrorIndex: 0,
     gameIndex: 0,
     recipeIndex: 0,
-    switch: true
+    animation: "Fade"
   };
 
   componentDidMount() {
@@ -99,14 +101,173 @@ class Projects extends Component {
     });
   };
 
-  image = () => {
-    return (
-      <img
-        className="mirrorPic"
-        src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
-        alt=""
-      />
-    );
+  toggleSwitch = animation => {
+    this.setState({ animation });
+  };
+
+  gameAnimation = () => {
+    switch (this.state.animation) {
+      case "Fade":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.gameIndex}
+              classNames="fade"
+              timeout={1000}
+            >
+              <img
+                className="gamePic"
+                src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+      case "Flip":
+        return (
+          <SwitchTransition mode={"out-in"}>
+            <CSSTransition
+              key={this.state.gameIndex}
+              classNames="flip"
+              timeout={1000}
+            >
+              <img
+                className="gamePic"
+                src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </SwitchTransition>
+        );
+      case "Slide":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.gameIndex}
+              classNames="slide"
+              timeout={1000}
+            >
+              <img
+                className="gamePic"
+                src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+
+      default:
+    }
+  };
+
+  mirrorAnimation = () => {
+    switch (this.state.animation) {
+      case "Fade":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.mirrorIndex}
+              classNames="fade"
+              timeout={1000}
+            >
+              <img
+                className="mirrorPic"
+                src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+      case "Flip":
+        return (
+          <SwitchTransition mode={"out-in"}>
+            <CSSTransition
+              key={this.state.mirrorIndex}
+              classNames="flip"
+              timeout={1000}
+            >
+              <img
+                className="mirrorPic"
+                src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </SwitchTransition>
+        );
+      case "Slide":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.mirrorIndex}
+              classNames="slide"
+              timeout={1000}
+            >
+              <img
+                className="mirrorPic"
+                src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+
+      default:
+    }
+  };
+
+  recipeAnimation = () => {
+    switch (this.state.animation) {
+      case "Fade":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.recipeIndex}
+              classNames="fade"
+              timeout={1000}
+            >
+              <img
+                className="recipePic"
+                src={require(`${this.state.recipePic[this.state.recipeIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+      case "Flip":
+        return (
+          <SwitchTransition mode={"out-in"}>
+            <CSSTransition
+              key={this.state.recipeIndex}
+              classNames="flip"
+              timeout={1000}
+            >
+              <img
+                className="recipePic"
+                src={require(`${this.state.recipePic[this.state.recipeIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </SwitchTransition>
+        );
+      case "Slide":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.recipeIndex}
+              classNames="slide"
+              timeout={1000}
+            >
+              <img
+                className="recipePic"
+                src={require(`${this.state.recipePic[this.state.recipeIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+
+      default:
+    }
   };
 
   render() {
@@ -123,21 +284,7 @@ class Projects extends Component {
         <div className="projectDivs">
           <div className="mirrorDiv" onTouchStart={console.log()}>
             {/* for safari compability */}
-            <SwitchTransition mode={"in-out"}>
-              <CSSTransition
-                key={this.state.mirrorIndex}
-                classNames="carousel"
-                timeout={1000}
-              >
-                <img
-                  className="mirrorPic"
-                  src={require(`${
-                    this.state.mirrorPic[this.state.mirrorIndex]
-                  }`)}
-                  alt=""
-                />
-              </CSSTransition>
-            </SwitchTransition>
+            {this.mirrorAnimation()}
             <div className="mirrorDesc">
               <div className="descText">
                 <h2>- Reflectere -</h2>A Google home voice controlled smart
@@ -254,19 +401,7 @@ class Projects extends Component {
             </div>
           </div>
           <div className="gameDiv">
-            <SwitchTransition mode={"in-out"}>
-              <CSSTransition
-                key={this.state.gameIndex}
-                classNames="carousel"
-                timeout={1000}
-              >
-                <img
-                  className="gamePic"
-                  src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
-                  alt=""
-                />
-              </CSSTransition>
-            </SwitchTransition>
+            {this.gameAnimation()}
             <div className="gameDesc">
               {" "}
               <div className="descText">
@@ -359,21 +494,7 @@ class Projects extends Component {
             </div>
           </div>
           <div className="recipeDiv">
-            <SwitchTransition mode={"in-out"}>
-              <CSSTransition
-                key={this.state.recipeIndex}
-                classNames="carousel"
-                timeout={1000}
-              >
-                <img
-                  className="recipePic"
-                  src={require(`${
-                    this.state.recipePic[this.state.recipeIndex]
-                  }`)}
-                  alt=""
-                />
-              </CSSTransition>
-            </SwitchTransition>
+            {this.recipeAnimation()}
             <div className="recipeDesc">
               {" "}
               <div className="descText">
@@ -449,6 +570,7 @@ class Projects extends Component {
           </div>
 
           <div className="borderB" />
+          <ToggleSwitch toggleSwitch={this.toggleSwitch} />
           <Footer />
         </div>
       </div>
