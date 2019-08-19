@@ -656,6 +656,10 @@ h2 {
     height: 115vh;
     left: -2%;
   }
+
+  .toggleSwitch {
+    bottom: -40px;
+  }
 }
 
 /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */ /* RESUME */
