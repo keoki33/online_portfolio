@@ -934,7 +934,7 @@ h2 {
 
 @keyframes fade50In {
   0% {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -968,8 +968,35 @@ h2 {
   }
 }
 
+@keyframes slideIn2 {
+  0% {
+    transform: translateX(-100%);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut2 {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 .flip-enter-active {
-  animation: flipIn 1s ease forwards;
+  animation: flipIn 1s cubic-bezier(0.27, 0.76, 0.59, 1.43) forwards;
 }
 
 .flip-exit {
@@ -977,11 +1004,11 @@ h2 {
 }
 
 .slide-enter-active {
-  animation: slideIn 1s ease forwards;
+  animation: slideIn2 1s ease forwards;
 }
 
 .slide-exit {
-  animation: slideOut 1s ease forwards;
+  animation: slideOut2 1s ease forwards;
 }
 
 .fade-enter-active {
