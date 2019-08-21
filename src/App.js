@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import "./App.css";
+import "./App.scss";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import About from "./About";

@@ -181,6 +181,10 @@ a:hover {
   z-index: 1;
 }
 
+.about img {
+  /* border-radius: 5px; */
+}
+
 .aboutPic {
   float: left;
   padding-right: 20px;
@@ -253,7 +257,7 @@ h2 {
   text-align: center;
   font-size: 12px;
   line-height: 20px;
-  font-weight: ;
+  font-weight: 600;
 }
 
 .skillsLogo {
@@ -915,7 +919,7 @@ h2 {
 
 @keyframes fade50In {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -949,15 +953,7 @@ h2 {
   }
 }
 
-.mirrorPic.carousel-enter {
-  animation: slideIn 1s ease forwards;
-}
-
-.mirrorPic.carousel-exit {
-  animation: slideOut 1s ease forwards;
-}
-
-.flip-enter {
+.flip-enter-active {
   animation: flipIn 1s ease forwards;
 }
 
@@ -965,7 +961,7 @@ h2 {
   animation: flipOut 1s ease forwards;
 }
 
-.slide-enter {
+.slide-enter-active {
   animation: slideIn 1s ease forwards;
 }
 
@@ -973,7 +969,7 @@ h2 {
   animation: slideOut 1s ease forwards;
 }
 
-.fade-enter {
+.fade-enter-active {
   animation: fade50In 1s ease forwards;
 }
 
