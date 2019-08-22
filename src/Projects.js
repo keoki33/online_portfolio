@@ -570,7 +570,11 @@ class Projects extends Component {
           </div>
 
           <div className="borderB" />
-          <ToggleSwitch toggleSwitch={this.toggleSwitch} />
+          <div className="controls">
+            <i class="material-icons leftArrow">arrow_left</i>
+            <ToggleSwitch toggleSwitch={this.toggleSwitch} />
+            <i class="material-icons rightArrow">arrow_right</i>
+          </div>
           <Footer />
         </div>
       </div>

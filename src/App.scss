@@ -603,6 +603,36 @@ h2 {
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=180, Strength=13);
 }
 
+.controls {
+  position: relative;
+  width: 350px;
+}
+
+.material-icons.leftArrow {
+  position: relative;
+  float: left;
+  font-size: 75px;
+  top: -32px;
+  left: 12px;
+  color: #99d4fc;
+  transition: transform 0.2s;
+}
+
+.material-icons.rightArrow {
+  position: relative;
+  font-size: 75px;
+  float: right;
+  top: -63px;
+  right: 10px;
+  color: #99d4fc;
+  transition: transform 0.2s;
+}
+
+.material-icons.leftArrow:hover,
+.material-icons.rightArrow:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 450px) {
   .projects h2 {
     margin-bottom: 15px;
@@ -678,6 +708,14 @@ h2 {
 
   .toggleSwitch {
     bottom: -40px;
+  }
+
+  .material-icons.leftArrow {
+    top: 20px;
+  }
+
+  .material-icons.rightArrow {
+    top: -10px;
   }
 }
 
