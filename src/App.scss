@@ -934,7 +934,7 @@ h2 {
 
 @keyframes fade50In {
   0% {
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -1016,7 +1016,7 @@ h2 {
 }
 
 .fade-exit {
-  animation: fade50Out 1s ease forwards;
+  animation: fade50Out 1s ease forwards 0.2s;
 }
 
 @keyframes popOut {
