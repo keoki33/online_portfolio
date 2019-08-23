@@ -22,7 +22,7 @@ class ToggleSwitch extends Component {
         <div
           className="switch2"
           onClick={() => {
-            this.select("Slide", 70);
+            this.select("Slide", 63);
           }}
         >
           Slide
@@ -30,7 +30,7 @@ class ToggleSwitch extends Component {
         <div
           className="switch3"
           onClick={() => {
-            this.select("Flip", 140);
+            this.select("Flip", 120);
           }}
         >
           Flip

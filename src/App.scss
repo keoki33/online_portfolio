@@ -328,7 +328,7 @@ h2 {
 
 @media screen and (max-width: 1365px) {
   .projectBack {
-    height: 120vh;
+    height: 130vh;
   }
 }
 
@@ -558,16 +558,14 @@ h2 {
 }
 
 .toggleSwitch {
-  width: 200px;
+  width: 180px;
   margin: auto;
-  font-size: 1em;
+  font-size: 0.9em;
   position: relative;
-  height: 2em;
-  line-height: 2em;
+  height: 1.9em;
+  line-height: 1.9em;
   border-radius: 0.3em;
   background: #ccc;
-
-  bottom: 10%;
 }
 
 .switch1,
@@ -585,10 +583,10 @@ h2 {
 .selector {
   position: absolute;
   text-align: center;
-  top: -1px;
-  width: 70px;
-  height: 34px;
-  padding: 1px;
+  top: -2px;
+  width: 60px;
+  height: 33px;
+  padding: 2px;
   box-sizing: border-box;
   -webkit-transition: 300ms ease-out;
   -moz-transition: 300ms ease-out;
@@ -605,32 +603,41 @@ h2 {
 
 .controls {
   position: relative;
-  width: 350px;
+  width: 318px;
+  height: 45px;
+  background: #a1a1a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  bottom: 10%;
+  border-radius: 10px;
+  top: -15%;
 }
 
 .material-icons.leftArrow {
-  position: relative;
-  float: left;
-  font-size: 75px;
-  top: -32px;
-  left: 12px;
-  color: #99d4fc;
+  font-size: 70px;
+  margin: 0;
+  color: #ccc;
   transition: transform 0.2s;
 }
 
 .material-icons.rightArrow {
-  position: relative;
-  font-size: 75px;
-  float: right;
-  top: -63px;
-  right: 10px;
-  color: #99d4fc;
+  font-size: 70px;
+  color: #ccc;
   transition: transform 0.2s;
+  margin: 0;
 }
 
 .material-icons.leftArrow:hover,
 .material-icons.rightArrow:hover {
   transform: scale(1.1);
+}
+
+.material-icons.leftArrow:active,
+.material-icons.rightArrow:active {
+  color: #40b1fc;
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 450px) {
@@ -706,16 +713,8 @@ h2 {
     left: -2%;
   }
 
-  .toggleSwitch {
-    bottom: -40px;
-  }
-
-  .material-icons.leftArrow {
-    top: 20px;
-  }
-
-  .material-icons.rightArrow {
-    top: -10px;
+  .controls {
+    top: 20%;
   }
 }
 
@@ -1037,6 +1036,37 @@ h2 {
   }
 }
 
+@keyframes slideLeftIn {
+  0% {
+    transform: translateX(100%);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftOut {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
 .flip-enter-active {
   animation: flipIn 1s cubic-bezier(0.27, 0.76, 0.59, 1.43) forwards;
 }
@@ -1059,6 +1089,14 @@ h2 {
 
 .fade-exit {
   animation: fade50Out 1s ease forwards 0.2s;
+}
+
+.slideLeft-enter-active {
+  animation: slideLeftIn 1s ease forwards;
+}
+
+.slideLeft-exit {
+  animation: slideLeftOut 1s ease forwards;
 }
 
 @keyframes popOut {

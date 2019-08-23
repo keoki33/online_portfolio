@@ -63,9 +63,18 @@ class Projects extends Component {
   }
 
   cyclePics = () => {
+    this.state.animation == "SlideLeft"
+      ? this.setState({ animation: "Slide" })
+      : console.log();
     this.mirrorPic();
     this.gamePic();
     this.recipePic();
+  };
+
+  backPics = () => {
+    this.mirrorPicBack();
+    this.gamePicBack();
+    this.recipePicBack();
   };
 
   componentWillUnmount() {
@@ -76,33 +85,99 @@ class Projects extends Component {
   mirrorPic = () => {
     if (this.state.mirrorIndex == this.state.mirrorPic.length - 1) {
       this.setState({ mirrorIndex: 0 });
+    } else {
+      this.setState({
+        mirrorIndex: this.state.mirrorIndex + 1
+      });
     }
-    this.setState({
-      mirrorIndex: this.state.mirrorIndex + 1,
-      switch: true
-    });
   };
 
   gamePic = () => {
     if (this.state.gameIndex == this.state.gamePic.length - 1) {
       this.setState({ gameIndex: 0 });
+    } else {
+      this.setState({
+        gameIndex: this.state.gameIndex + 1
+      });
     }
-    this.setState({
-      gameIndex: this.state.gameIndex + 1
-    });
   };
 
   recipePic = () => {
     if (this.state.recipeIndex == this.state.recipePic.length - 1) {
       this.setState({ recipeIndex: 0 });
+    } else {
+      this.setState({
+        recipeIndex: this.state.recipeIndex + 1
+      });
     }
-    this.setState({
-      recipeIndex: this.state.recipeIndex + 1
-    });
+  };
+
+  mirrorPicBack = () => {
+    if (this.state.mirrorIndex == 0) {
+      this.setState({ mirrorIndex: this.state.mirrorPic.length - 1 });
+    } else {
+      this.setState({
+        mirrorIndex: this.state.mirrorIndex - 1
+      });
+    }
+  };
+
+  gamePicBack = () => {
+    if (this.state.gameIndex == 0) {
+      this.setState({ gameIndex: this.state.gamePic.length - 1 });
+    } else {
+      this.setState({
+        gameIndex: this.state.gameIndex - 1
+      });
+    }
+  };
+
+  recipePicBack = () => {
+    if (this.state.recipeIndex == 0) {
+      this.setState({ recipeIndex: this.state.recipePic.length - 1 });
+    } else {
+      this.setState({
+        recipeIndex: this.state.recipeIndex - 1
+      });
+    }
   };
 
   toggleSwitch = animation => {
     this.setState({ animation });
+  };
+
+  slideLeft = () => {
+    switch (this.state.animation) {
+      case "Slide":
+        this.setState({ animation: "SlideLeft" });
+        break;
+
+      // case "SlideLeft":
+      //   this.setState({ animation: "Slide" });
+      //   break;
+      default:
+    }
+  };
+
+  nextPic = x => {
+    if (x) {
+      this.state.animation == "SlideLeft"
+        ? this.setState({ animation: "Slide" })
+        : console.log();
+      this.cyclePics();
+      clearInterval(this.interval);
+      this.interval = setInterval(() => this.cyclePics(), 3000);
+      console.log(this.state.gameIndex);
+    } else {
+      this.state.animation == "Slide"
+        ? this.setState({ animation: "SlideLeft" })
+        : console.log();
+      this.backPics();
+
+      clearInterval(this.interval);
+
+      this.interval = setInterval(() => this.cyclePics(), 3000);
+    }
   };
 
   gameAnimation = () => {
@@ -145,6 +220,22 @@ class Projects extends Component {
             <CSSTransition
               key={this.state.gameIndex}
               classNames="slide"
+              timeout={1000}
+            >
+              <img
+                className="gamePic"
+                src={require(`${this.state.gamePic[this.state.gameIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+      case "SlideLeft":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.gameIndex}
+              classNames="slideLeft"
               timeout={1000}
             >
               <img
@@ -210,7 +301,22 @@ class Projects extends Component {
             </CSSTransition>
           </TransitionGroup>
         );
-
+      case "SlideLeft":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.mirrorIndex}
+              classNames="slideLeft"
+              timeout={1000}
+            >
+              <img
+                className="mirrorPic"
+                src={require(`${this.state.mirrorPic[this.state.mirrorIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
       default:
     }
   };
@@ -255,6 +361,22 @@ class Projects extends Component {
             <CSSTransition
               key={this.state.recipeIndex}
               classNames="slide"
+              timeout={1000}
+            >
+              <img
+                className="recipePic"
+                src={require(`${this.state.recipePic[this.state.recipeIndex]}`)}
+                alt=""
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        );
+      case "SlideLeft":
+        return (
+          <TransitionGroup component={null}>
+            <CSSTransition
+              key={this.state.recipeIndex}
+              classNames="slideLeft"
               timeout={1000}
             >
               <img
@@ -571,9 +693,23 @@ class Projects extends Component {
 
           <div className="borderB" />
           <div className="controls">
-            <i class="material-icons leftArrow">arrow_left</i>
+            <i
+              onClick={() => {
+                this.nextPic(false);
+              }}
+              class="material-icons leftArrow"
+            >
+              arrow_left
+            </i>
             <ToggleSwitch toggleSwitch={this.toggleSwitch} />
-            <i class="material-icons rightArrow">arrow_right</i>
+            <i
+              onClick={() => {
+                this.nextPic(true);
+              }}
+              class="material-icons rightArrow"
+            >
+              arrow_right
+            </i>
           </div>
           <Footer />
         </div>
