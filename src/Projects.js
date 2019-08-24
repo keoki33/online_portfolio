@@ -396,13 +396,13 @@ class Projects extends Component {
     return (
       <div className={this.state.class}>
         <h2>My journey so far</h2> <div className="border" />
-        <div className="projectBackDiv">
+        {/* <div className="projectBackDiv">
           <img
             className="projectBack"
             src={require(`./images/matrix1.jpg`)}
             alt=""
           />
-        </div>
+        </div> */}
         <div className="projectDivs">
           <div className="mirrorDiv" onTouchStart={console.log()}>
             {/* for safari compability */}
