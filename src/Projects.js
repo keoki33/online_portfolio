@@ -691,7 +691,7 @@ class Projects extends Component {
             </div>
           </div>
 
-          <div className="borderB" />
+          {/* <div className="borderB" /> */}
           <div className="controls">
             <i
               onClick={() => {
