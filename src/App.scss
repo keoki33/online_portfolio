@@ -307,16 +307,6 @@ h2 {
   height: 50vh;
 }
 
-@keyframes blinker {
-  0% {
-  }
-  50% {
-    opacity: 0.92;
-  }
-  100% {
-  }
-}
-
 .mirrorDiv {
 }
 
@@ -485,22 +475,6 @@ h2 {
   text-align: center;
 }
 
-// .border {
-//   width: 90%;
-//   margin: 0 auto;
-//   border-top: 2px solid rgba(182, 182, 182, 0.3);
-//   position: relative;
-// }
-
-// .borderB {
-//   width: 90%;
-//   margin: 0 auto;
-//   /*
-//   border-top: 2px solid rgba(182, 182, 182, 0.3); */
-//   position: relative;
-//   /* margin-top: -60px; */
-// }
-
 .monitors {
   /* position: relative; */
 }
@@ -596,6 +570,38 @@ h2 {
 .material-icons.rightArrow:active {
   color: #40b1fc;
   transform: scale(0.9);
+}
+
+.flip-enter-active {
+  animation: flipIn 1s cubic-bezier(0.27, 0.76, 0.59, 1.43) forwards;
+}
+
+.flip-exit {
+  animation: flipOut 1s ease forwards;
+}
+
+.slide-enter-active {
+  animation: slideIn2 1s ease forwards;
+}
+
+.slide-exit {
+  animation: slideOut2 1s ease forwards;
+}
+
+.fade-enter-active {
+  animation: fade50In 1s ease forwards;
+}
+
+.fade-exit {
+  animation: fade50Out 1s ease forwards 0.2s;
+}
+
+.slideLeft-enter-active {
+  animation: slideLeftIn 1s ease forwards;
+}
+
+.slideLeft-exit {
+  animation: slideLeftOut 1s ease forwards;
 }
 
 @media screen and (max-width: 915px) {
@@ -1032,38 +1038,6 @@ h2 {
   }
 }
 
-.flip-enter-active {
-  animation: flipIn 1s cubic-bezier(0.27, 0.76, 0.59, 1.43) forwards;
-}
-
-.flip-exit {
-  animation: flipOut 1s ease forwards;
-}
-
-.slide-enter-active {
-  animation: slideIn2 1s ease forwards;
-}
-
-.slide-exit {
-  animation: slideOut2 1s ease forwards;
-}
-
-.fade-enter-active {
-  animation: fade50In 1s ease forwards;
-}
-
-.fade-exit {
-  animation: fade50Out 1s ease forwards 0.2s;
-}
-
-.slideLeft-enter-active {
-  animation: slideLeftIn 1s ease forwards;
-}
-
-.slideLeft-exit {
-  animation: slideLeftOut 1s ease forwards;
-}
-
 @keyframes popOut {
   0% {
     transform: scale(1.1) rotate(0deg);
@@ -1091,5 +1065,15 @@ h2 {
   }
   100% {
     transform: scale(1.1) rotate(360deg);
+  }
+}
+
+@keyframes blinker {
+  0% {
+  }
+  50% {
+    opacity: 0.92;
+  }
+  100% {
   }
 }
