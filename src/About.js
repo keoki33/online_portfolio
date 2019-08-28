@@ -16,7 +16,7 @@ class About extends Component {
     return (
       <div className={this.state.class}>
         <h2>About me</h2>
-        <div className="aboutPics">
+        <div className="aboutPicWrapper">
           {/* <img src={require(`./images/gw.jpg`)} alt="" className="aboutPic" /> */}
           <img src={require(`./images/gw2.jpg`)} alt="" className="aboutPic" />
         </div>

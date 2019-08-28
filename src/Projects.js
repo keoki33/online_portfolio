@@ -667,7 +667,6 @@ class Projects extends Component {
                     <br />
                     RAILS
                   </p>
-
                   <p>
                     <img
                       className="projectLogo"
@@ -690,8 +689,7 @@ class Projects extends Component {
               </div>
             </div>
           </div>
-
-          {/* <div className="borderB" /> */}
+          <div className="borderB" />
           <div className="controls">
             <i
               onClick={() => {
@@ -717,5 +715,4 @@ class Projects extends Component {
     );
   }
 }
-
 export default Projects;
