@@ -141,62 +141,6 @@ nav {
   width: 100%;
 }
 
-/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
-/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
-/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
-
-.about {
-  z-index: 1;
-  h2 {
-    text-align: center;
-  }
-  p {
-    text-align: left;
-  }
-  img {
-    border-radius: 3px;
-    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-
-.aboutPicWrapper {
-  position: relative;
-  padding-top: 10px;
-  padding-right: 25px;
-  padding-bottom: 20px;
-  float: left;
-  @media screen and (max-width: 580px) {
-    max-width: 50%;
-  }
-  img {
-    float: left;
-    max-width: 300px;
-    @media screen and (max-width: 580px) {
-      max-width: 100%;
-    }
-  }
-}
-
-.hobbiesPicsWrapper {
-  display: flex;
-  align-items: center;
-  height: fit-content;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 9px;
-  line-height: 11px;
-  font-weight: bold;
-  padding: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  img {
-    max-height: 100px;
-    height: 50%;
-    margin: 10px;
-  }
-}
-
 /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */
 /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */
 /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */ /* HOME */
@@ -229,6 +173,29 @@ h2 {
     max-height: 65px;
     height: 11vh;
     padding: 5px 30px 0px 30px;
+  }
+}
+
+.lasers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  pointer-events: none;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 1000;
+  animation: dash 0.3s linear;
+  filter: drop-shadow(0px 0px 5px rgb(218, 0, 0));
+}
+
+.laser {
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
   }
 }
 
@@ -300,6 +267,62 @@ h2 {
 
 .resume.animation-exit {
   /* animation: none; */
+}
+
+/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
+/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
+/* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
+
+.about {
+  z-index: 1;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: left;
+  }
+  img {
+    border-radius: 3px;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.aboutPicWrapper {
+  position: relative;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  float: left;
+  @media screen and (max-width: 580px) {
+    max-width: 50%;
+  }
+  img {
+    float: left;
+    max-width: 300px;
+    @media screen and (max-width: 580px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.hobbiesPicsWrapper {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 9px;
+  line-height: 11px;
+  font-weight: bold;
+  padding: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  img {
+    max-height: 100px;
+    height: 50%;
+    margin: 10px;
+  }
 }
 
 /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */ /* PROJECTS */

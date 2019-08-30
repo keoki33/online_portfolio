@@ -19,10 +19,17 @@ class App extends Component {
     y: 0,
     clicked: false,
     navbarClass: "navbarIn",
-    facePic: "./images/180.png"
+    facePic: "./images/180.png",
+    middleX: 0,
+    middleY: 0,
+    laser: false
   };
 
   whatever = () => {};
+
+  componentDidMount() {
+    this.screenPos();
+  }
 
   mouseTrack(e) {
     this.setState({ x: e.pageX, y: e.pageY });
@@ -58,6 +65,56 @@ class App extends Component {
     this.setState({ clicked: true });
   };
 
+  laser = () => {
+    return (
+      <svg className="lasers">
+        <line
+          className="laser"
+          x1={this.state.middleX + 12}
+          y1={this.state.middleY + 53}
+          x2={this.state.x + 12}
+          y2={this.state.y}
+          style={{ stroke: "rgb(255,0,0)", strokeWidth: 4 }}
+        />
+        <line
+          className="laser"
+          x1={this.state.middleX - 12}
+          y1={this.state.middleY + 53}
+          x2={this.state.x - 12}
+          y2={this.state.y}
+          style={{ stroke: "rgb(255,0,0)", strokeWidth: 4 }}
+        />
+      </svg>
+    );
+  };
+
+  shoot = () => {
+    this.screenPos();
+    if (window.location.pathname === "/") {
+      this.setState({ laser: true });
+      setTimeout(() => {
+        this.setState({ laser: false });
+      }, 300);
+    }
+  };
+
+  screenPos = () => {
+    const pic = document.getElementById("facePic");
+    let pos = pic.getBoundingClientRect();
+    // console.log(pos.left);
+    // console.log(pos.top);
+    // console.log(pos.width);
+    // console.log(pos.height);
+    // console.log(
+    //   `middle x=${pos.left + pos.width * 0.5} y=${Math.abs(pos.top)}`
+    // );
+    this.setState({
+      middleX: pos.left + pos.width * 0.5,
+      middleY: Math.abs(pos.top)
+    });
+    // console.log(this.state.width);
+  };
+
   render() {
     return (
       <Router>
@@ -77,6 +134,7 @@ class App extends Component {
                     this.mouseTrack(event);
                   }}
                 >
+                  {this.state.laser ? this.laser() : console.log("")}
                   {/* {console.log(`x: ${this.state.x} y: ${this.state.y}`)} */}
                   <Navbar
                     x={this.state.x}
@@ -96,7 +154,13 @@ class App extends Component {
                           <Route
                             exact
                             path={["/home", "/"]}
-                            render={props => <Home />}
+                            render={props => (
+                              <Home
+                                x={this.state.x}
+                                y={this.state.y}
+                                shoot={this.shoot}
+                              />
+                            )}
                           />
                           <Route path="/about" render={props => <About />} />
                           <Route

@@ -12,7 +12,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div className={this.state.class}>
+      <div
+        className={this.state.class}
+        onClick={event => {
+          this.props.shoot();
+        }}
+      >
         <div className="homeDesc">
           <hr />
           <h2>George Wong</h2>
