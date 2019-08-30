@@ -70,9 +70,6 @@ nav {
   position: relative;
   z-index: 4;
   &:hover {
-    /* transform: translateZ(1000px); */
-    /* transform: rotate3d(0, 0, 0, 0deg); */
-    /* transform: rotateX(50deg); */
     transform: scale(1.1) !important;
   }
   &.animate {
