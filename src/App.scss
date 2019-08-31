@@ -236,13 +236,20 @@ h2 {
 }
 
 .sinatraLogo path {
+  opacity: 0;
   stroke: #e76565;
   stroke-dasharray: 2000px;
   stroke-dashoffset: 2000px;
   animation: display2000 3s linear forwards 0.8s;
 }
 
+.railsLogo {
+  opacity: 0;
+  animation: fadeIn 3s ease-in forwards 0.8s;
+}
+
 .railsLogo path {
+  opacity: 0;
   stroke: #e76565;
   stroke-dasharray: 3188px;
   stroke-dashoffset: 3188px;
@@ -255,7 +262,7 @@ h2 {
 
 .javascriptLogo path {
   stroke: #e0c85b;
-  stroke-width: 30px;
+  stroke-width: 20px;
   opacity: 0;
   stroke-dasharray: 1000px;
   stroke-dashoffset: 1000px;
