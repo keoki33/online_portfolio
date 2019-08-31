@@ -71,16 +71,16 @@ class App extends Component {
         <line
           className="laser"
           x1={this.state.middleX + 12}
-          y1={this.state.middleY + 53}
-          x2={this.state.x + 12}
+          y1={this.state.middleY + 3}
+          x2={this.state.x + 5}
           y2={this.state.y}
           style={{ stroke: "rgb(255,0,0)", strokeWidth: 4 }}
         />
         <line
           className="laser"
           x1={this.state.middleX - 12}
-          y1={this.state.middleY + 53}
-          x2={this.state.x - 12}
+          y1={this.state.middleY + 3}
+          x2={this.state.x - 5}
           y2={this.state.y}
           style={{ stroke: "rgb(255,0,0)", strokeWidth: 4 }}
         />
@@ -89,7 +89,7 @@ class App extends Component {
   };
 
   shoot = () => {
-    this.screenPos();
+    // this.screenPos();
     if (window.location.pathname === "/") {
       this.setState({ laser: true });
       setTimeout(() => {
@@ -134,7 +134,7 @@ class App extends Component {
                     this.mouseTrack(event);
                   }}
                 >
-                  {this.state.laser ? this.laser() : console.log("")}
+                  {this.state.laser ? this.laser() : console.log()}
                   {/* {console.log(`x: ${this.state.x} y: ${this.state.y}`)} */}
                   <Navbar
                     x={this.state.x}
