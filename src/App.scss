@@ -170,6 +170,7 @@ h2 {
   line-height: 20px;
   font-weight: 600;
   img {
+    // opacity: 0;
     max-height: 65px;
     height: 11vh;
     padding: 5px 30px 0px 30px;
@@ -205,48 +206,68 @@ h2 {
   // stroke-width: 5px;
   stroke-dasharray: 3188px;
   stroke-dashoffset: 3188px;
-  animation: display3000 2s linear forwards;
+  animation: display3000 3s linear forwards;
   fill: #f0470d;
 }
 
 .cssLogo path {
   stroke: #2196f3;
+  opacity: 0;
   stroke-dasharray: 3188px;
   stroke-dashoffset: 3188px;
-  animation: display3000 2.1s linear forwards;
+  animation: display3000 3s linear forwards 0.2s;
 }
 
-.scssLogo {
+.scssLogo path {
+  opacity: 0;
   stroke: #cf649a;
   stroke-dasharray: 3188px;
   stroke-dashoffset: 3188px;
-  animation: display3000 2.2s linear forwards;
+  animation: display3000 3s linear forwards 0.4s;
   fill: #cf649a;
 }
 
 .rubyLogo path {
+  opacity: 0;
   stroke: #e76565;
   stroke-dasharray: 2000px;
   stroke-dashoffset: 2000px;
-  animation: display2000 2.8s linear forwards;
+  animation: display2000 3s linear forwards 0.6s;
 }
 
 .sinatraLogo path {
   stroke: #e76565;
   stroke-dasharray: 2000px;
   stroke-dashoffset: 2000px;
-  animation: display2000 4s linear forwards;
+  animation: display2000 3s linear forwards 0.8s;
 }
 
 .railsLogo path {
   stroke: #e76565;
   stroke-dasharray: 3188px;
   stroke-dashoffset: 3188px;
-  animation: display3000 3.8s linear forwards;
+  animation: display3000 3s linear forwards 1s;
 }
 
 .skillsLogo.railsLogo {
   animation: fadeIn 5s ease-in forwards;
+}
+
+.javascriptLogo path {
+  stroke: #e0c85b;
+  stroke-width: 30px;
+  opacity: 0;
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation: display1000 3s linear forwards 1.2s;
+}
+
+.reactLogo path {
+  stroke: #53c1de;
+  opacity: 0;
+  stroke-dasharray: 3188px;
+  stroke-dashoffset: 3188px;
+  animation: display3000 3s linear forwards 3s;
 }
 
 @mixin animation-mixin($name, $offset) {
@@ -254,18 +275,22 @@ h2 {
     0% {
       stroke-dashoffset: $offset;
       fill: transparent;
+      opacity: 1;
     }
     60% {
       fill: transparent;
+      opacity: 1;
     }
     100% {
+      opacity: 1;
       stroke-dashoffset: 0;
     }
   }
 }
 
-@include animation-mixin(display3000, 3000px);
+@include animation-mixin(display1000, 1000px);
 @include animation-mixin(display2000, 2000px);
+@include animation-mixin(display3000, 3000px);
 
 @keyframes explode {
   0% {
