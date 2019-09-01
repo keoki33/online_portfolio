@@ -156,8 +156,8 @@ h2 {
   /* border-bottom: 2px solid rgba(182, 182, 182, 0.3); */
   margin-top: 1%;
   margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1400px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -173,13 +173,13 @@ h2 {
     // opacity: 0;
     max-height: 65px;
     height: 11vh;
-    padding: 5px 30px 0px 30px;
+    padding: 5px 25px;
   }
   svg {
     height: 11vh;
     max-height: 65px;
-    padding: 5px 30px;
-    width: 11vh;
+    padding: 5px 25px;
+    max-width: 11vh;
     stroke-width: 5px;
   }
 }
@@ -227,12 +227,21 @@ h2 {
   fill: #cf649a;
 }
 
+// .rubyLogo path:nth-child(-n + 10) {
+//   opacity: 0;
+//   stroke: #e76565;
+//   stroke-dasharray: 2000px;
+//   stroke-dashoffset: 2000px;
+//   animation: display2000 3s linear forwards 0.6s;
+// }
+
 .rubyLogo path {
   opacity: 0;
-  stroke: #e76565;
-  stroke-dasharray: 2000px;
-  stroke-dashoffset: 2000px;
-  animation: display2000 3s linear forwards 0.6s;
+  stroke: #b10d23;
+  stroke-dasharray: 3000px;
+  stroke-dashoffset: 3000px;
+  animation: display3000 3s linear forwards 0.6s;
+  fill: #b10d23;
 }
 
 .sinatraLogo path {
@@ -245,7 +254,7 @@ h2 {
 
 .railsLogo {
   opacity: 0;
-  animation: fadeIn 3s ease-in forwards 0.8s;
+  animation: fadeIn 3s linear forwards 1s;
 }
 
 .railsLogo path {
@@ -256,8 +265,9 @@ h2 {
   animation: display3000 3s linear forwards 1s;
 }
 
-.skillsLogo.railsLogo {
-  animation: fadeIn 5s ease-in forwards;
+.skillsLogo.actionLogo {
+  opacity: 0;
+  animation: fadeIn 3s linear forwards 1.2s;
 }
 
 .javascriptLogo path {
@@ -266,7 +276,7 @@ h2 {
   opacity: 0;
   stroke-dasharray: 1000px;
   stroke-dashoffset: 1000px;
-  animation: display1000 3s linear forwards 1.2s;
+  animation: display1000 3s linear forwards 1.4s;
 }
 
 .reactLogo path {
@@ -274,7 +284,113 @@ h2 {
   opacity: 0;
   stroke-dasharray: 3188px;
   stroke-dashoffset: 3188px;
-  animation: display3000 3s linear forwards 3s;
+  animation: display3000 3s linear forwards 1.6s;
+}
+
+.sqlLogo path {
+  stroke: #feb205;
+  stroke-width: 1px;
+
+  opacity: 0;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: display1000 3s linear forwards 1.8s;
+  fill: #feb205;
+}
+
+.googleLogo path,
+circle {
+  stroke: #494949;
+  opacity: 0;
+  animation: display2000 3s linear forwards 2s;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.herokuLogo path {
+  opacity: 0;
+  stroke: #805cbd;
+  animation: display2000 3s linear forwards 2.2s;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  fill: #7e57c2;
+}
+
+.skillsLogo.netlify {
+  opacity: 0;
+  animation: fadeIn 3s linear forwards 2.4s;
+}
+
+.comptiaLogo {
+  .st0 {
+    fill: #fff;
+  }
+  .st1 {
+    fill: #e2231a;
+  }
+  .st2 {
+    fill: #6a747c;
+  }
+}
+
+.comptiaLogo path {
+  opacity: 0;
+  stroke: #000000;
+  stroke-width: 1px;
+  animation: display2000 3s linear forwards 2.6s;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.zendeskLogo path {
+  opacity: 0;
+  stroke: #03363d;
+  stroke-width: 1px;
+  animation: display2000 3s linear forwards 2.8s;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.photoshopLogo path {
+  opacity: 0;
+  stroke: #393687;
+  stroke-width: 1px;
+  animation: display2000 3s linear forwards 3s;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.aseLogo path:nth-child(0),
+path:nth-child(2),
+path:nth-child(4),
+path:nth-child(7),
+path:nth-child(9),
+path:nth-child(10),
+path:nth-child(11),
+path:nth-child(12),
+path:nth-child(13),
+path:nth-child(14),
+path:nth-child(15),
+path:nth-child(16),
+path:nth-child(17),
+path:nth-child(19),
+path:nth-child(21),
+path:nth-child(18) {
+  opacity: 0;
+  stroke: #5a5a5a;
+  stroke-width: 1px;
+  animation: display2000 3s linear forwards 3.2s;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.aseLogo path:nth-child(4) {
+  fill: #1879bf;
+}
+
+.skillsLogoMore {
+  opacity: 0;
+  animation: fadeIn 3s linear forwards 3.4s;
 }
 
 @mixin animation-mixin($name, $offset) {
@@ -284,7 +400,7 @@ h2 {
       fill: transparent;
       opacity: 1;
     }
-    60% {
+    70% {
       fill: transparent;
       opacity: 1;
     }
