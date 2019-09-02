@@ -393,51 +393,8 @@ circle {
 
 .skillsLogoMore {
   opacity: 0;
-  animation: fadeIn $iconTime linear forwards 3.4s;
-}
-
-@mixin animation-mixin($name, $offset) {
-  @keyframes #{$name} {
-    0% {
-      stroke-dashoffset: $offset;
-      fill: transparent;
-      opacity: 1;
-    }
-    70% {
-      fill: transparent;
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      stroke-dashoffset: 0;
-    }
-  }
-}
-
-@include animation-mixin(display1000, 1000px);
-@include animation-mixin(display2000, 2000px);
-@include animation-mixin(display3000, 3000px);
-
-@keyframes explode {
-  0% {
-    stroke-dasharray: 0;
-  }
-  100% {
-    stroke-dasharray: 100;
-    transform: scale(5) translate(-50%, -50%);
-  }
-}
-
-@keyframes d2 {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 100;
-  }
+  animation: fadeJiggleIn $iconTime cubic-bezier(0.27, 0.76, 0.59, 1.43)
+    forwards 3.4s;
 }
 
 /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */ /* SLIDE THEME */
@@ -1315,5 +1272,111 @@ circle {
     opacity: 0.92;
   }
   100% {
+  }
+}
+
+@keyframes fadeJiggleIn {
+  0% {
+    opacity: 0;
+  }
+
+  85% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  95% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@mixin animation-mixin($name, $offset) {
+  @keyframes #{$name} {
+    0% {
+      stroke-dashoffset: $offset;
+      fill: transparent;
+      opacity: 1;
+    }
+    70% {
+      fill: transparent;
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@include animation-mixin(display1000, 1000px);
+@include animation-mixin(display2000, 2000px);
+@include animation-mixin(display3000, 3000px);
+
+$fireColor: rgb(255, 80, 0);
+$fireColorT: rgba(255, 80, 0, 0);
+$dur: 1s;
+$blur: 0.02em;
+$fireRad: 3em;
+$parts: 50;
+$partSize: 5em;
+$fireSize: 8px;
+
+// $fireRad: 3em;
+// $parts: 50;
+// $partSize: 5em;
+
+.fire {
+  font-size: $fireSize;
+  filter: blur($blur);
+  -webkit-filter: blur($blur);
+  // margin: 3em auto 0 auto;
+  position: absolute;
+  width: 10em;
+  height: 12em;
+  // width: 10em;
+  // height: 12em;
+  animation: fadeOut 5s linear forwards;
+}
+.particle {
+  animation: rise $dur ease-in infinite;
+  background-image: radial-gradient($fireColor 20%, $fireColorT 70%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: $partSize;
+  height: $partSize;
+  // spread particles out in time and x-position to get desired effect
+  @for $p from 1 through $parts {
+    &:nth-of-type(#{$p}) {
+      animation-delay: $dur * random();
+      left: calc((100% - #{$partSize}) * #{($p - 1) / $parts});
+    }
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10em) scale(0);
   }
 }

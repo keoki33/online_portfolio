@@ -10,6 +10,7 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import ProjectsV2 from "./ProjectsV2";
+import Fire from "./Fire";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -22,7 +23,9 @@ class App extends Component {
     facePic: "./images/180.png",
     middleX: 0,
     middleY: 0,
-    laser: false
+    laser: false,
+    fireArray: [],
+    fireCount: 1
   };
 
   whatever = () => {};
@@ -32,6 +35,7 @@ class App extends Component {
   }
 
   mouseTrack(e) {
+    this.screenPos();
     this.setState({ x: e.pageX, y: e.pageY });
     // console.log(this.state.x);
   }
@@ -45,21 +49,21 @@ class App extends Component {
     // console.log(this.state.y);
   }
 
-  facePic = () => {
-    if (this.state.clicked) {
-      this.setState({ facePic: "./images/smile.jpg" }, () =>
-        setTimeout(() => {
-          this.setState({ clicked: false });
-        }, 1000)
-      );
-    } else if (this.state.x > 2550) {
-      this.setState({ facePic: "./images/230.png" });
-    } else if (this.state.x < 2330) {
-      this.setState({ facePic: "./images/130.png" });
-    } else {
-      this.setState({ facePic: "./images/180.png" });
-    }
-  };
+  // facePic = () => {
+  //   if (this.state.clicked) {
+  //     this.setState({ facePic: "./images/smile.jpg" }, () =>
+  //       setTimeout(() => {
+  //         this.setState({ clicked: false });
+  //       }, 1000)
+  //     );
+  //   } else if (this.state.x > 2550) {
+  //     this.setState({ facePic: "./images/230.png" });
+  //   } else if (this.state.x < 2330) {
+  //     this.setState({ facePic: "./images/130.png" });
+  //   } else {
+  //     this.setState({ facePic: "./images/180.png" });
+  //   }
+  // };
 
   handleClick = () => {
     this.setState({ clicked: true });
@@ -71,7 +75,7 @@ class App extends Component {
         <line
           className="laser"
           x1={this.state.middleX + 12}
-          y1={this.state.middleY + 3}
+          y1={this.state.middleY}
           x2={this.state.x + 5}
           y2={this.state.y}
           style={{ stroke: "rgb(255,0,0)", strokeWidth: 4 }}
@@ -79,7 +83,7 @@ class App extends Component {
         <line
           className="laser"
           x1={this.state.middleX - 12}
-          y1={this.state.middleY + 3}
+          y1={this.state.middleY}
           x2={this.state.x - 5}
           y2={this.state.y}
           style={{ stroke: "rgb(255,0,0)", strokeWidth: 4 }}
@@ -89,13 +93,15 @@ class App extends Component {
   };
 
   shoot = () => {
-    // this.screenPos();
+    this.screenPos();
+
     if (window.location.pathname === "/") {
-      this.setState({ laser: true });
+      this.setState({ laser: true, fireCount: this.state.fireCount + 1 });
       setTimeout(() => {
         this.setState({ laser: false });
       }, 300);
     }
+    this.fire();
   };
 
   screenPos = () => {
@@ -103,6 +109,8 @@ class App extends Component {
     let pos = pic.getBoundingClientRect();
     // console.log(pos.left);
     // console.log(pos.top);
+    // console.log(pos.bottom);
+    // console.log(this.state.middleY);
     // console.log(pos.width);
     // console.log(pos.height);
     // console.log(
@@ -110,9 +118,24 @@ class App extends Component {
     // );
     this.setState({
       middleX: pos.left + pos.width * 0.5,
-      middleY: Math.abs(pos.top)
+      middleY: Math.abs(pos.bottom * 0.6)
     });
     // console.log(this.state.width);
+  };
+
+  fire = () => {
+    for (let i = 0; i < this.state.fireCount; i++) {
+      this.setState({
+        fireArray: [
+          ...this.state.fireArray,
+          <Fire key={this.state.fireCount} x={this.state.x} y={this.state.y} />
+        ]
+      });
+    }
+    console.log(this.state.fireArray);
+    if (this.state.fireArray.length > 5) {
+      this.setState({ fireArray: this.state.fireArray.slice(1) });
+    }
   };
 
   render() {
@@ -135,6 +158,7 @@ class App extends Component {
                   }}
                 >
                   {this.state.laser ? this.laser() : console.log()}
+
                   {/* {console.log(`x: ${this.state.x} y: ${this.state.y}`)} */}
                   <Navbar
                     x={this.state.x}
@@ -144,6 +168,7 @@ class App extends Component {
                     handleClick={this.handleClick}
                   />
                   <div className="content">
+                    {this.state.fireArray}
                     <TransitionGroup component={null}>
                       <CSSTransition
                         key={location.key}
