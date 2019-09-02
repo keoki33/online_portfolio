@@ -191,8 +191,7 @@ h2 {
   position: absolute;
   left: 0;
   top: 0;
-
-  height: 190vh;
+  height: 110vh;
   width: 100vw;
   z-index: 5;
   pointer-events: none;
@@ -200,6 +199,10 @@ h2 {
   stroke-dashoffset: 1000;
   animation: dash 0.3s linear;
   filter: drop-shadow(0px 0px 5px rgb(218, 0, 0));
+
+  @media screen and (max-width: 605px) {
+    height: 200vh;
+  }
 }
 
 .laser {
