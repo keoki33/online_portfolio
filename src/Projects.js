@@ -695,7 +695,7 @@ class Projects extends Component {
               onClick={() => {
                 this.nextPic(false);
               }}
-              class="material-icons leftArrow"
+              className="material-icons leftArrow"
             >
               arrow_left
             </i>
@@ -704,7 +704,7 @@ class Projects extends Component {
               onClick={() => {
                 this.nextPic(true);
               }}
-              class="material-icons rightArrow"
+              className="material-icons rightArrow"
             >
               arrow_right
             </i>

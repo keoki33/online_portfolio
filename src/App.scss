@@ -91,18 +91,19 @@ nav {
   .navbarIn {
     color: rgb(32, 32, 32);
     font-size: 15px;
-    height: 80px;
+    height: 90px;
+    margin-bottom: 10px;
   }
 
   .navbarOut {
     color: rgb(32, 32, 32);
     font-size: 15px;
-    height: 80px;
-    margin-top: 14px;
+    height: 90px;
+    margin-top: -14px;
   }
 
   .facePic {
-    width: 25px;
+    width: 50px;
     padding: 2%;
   }
 }
