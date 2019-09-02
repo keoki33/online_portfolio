@@ -123,19 +123,38 @@ class App extends Component {
     // console.log(this.state.width);
   };
 
+  // fire = () => {
+  //   for (let i = 0; i < this.state.fireCount; i++) {
+  //     this.setState({
+  //       fireArray: [
+  //         ...this.state.fireArray,
+  //         <Fire key={this.state.fireCount} x={this.state.x} y={this.state.y} />
+  //       ]
+  //     });
+  //   }
+  //   if (this.state.fireArray.length > 5) {
+  //     this.setState({
+  //       fireArray: this.state.fireArray.slice(1)
+  //     });
+  //   }
+  // };
+
   fire = () => {
-    for (let i = 0; i < this.state.fireCount; i++) {
-      this.setState({
+    this.setState(
+      {
         fireArray: [
           ...this.state.fireArray,
           <Fire key={this.state.fireCount} x={this.state.x} y={this.state.y} />
         ]
-      });
-    }
-    console.log(this.state.fireArray);
-    if (this.state.fireArray.length > 5) {
-      this.setState({ fireArray: this.state.fireArray.slice(1) });
-    }
+      },
+      () => {
+        if (this.state.fireArray.length > 4) {
+          this.setState({
+            fireArray: this.state.fireArray.slice(1)
+          });
+        }
+      }
+    );
   };
 
   render() {

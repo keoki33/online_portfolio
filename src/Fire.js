@@ -10,7 +10,7 @@ class Fire extends Component {
       <div
         className="fire"
         style={{
-          left: `${this.props.x - 30}px`,
+          left: `${this.props.x - 40}px`,
           top: `${this.props.y - 200}px`
         }}
       >

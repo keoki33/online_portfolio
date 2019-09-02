@@ -1348,6 +1348,7 @@ $fireSize: 8px;
   // width: 10em;
   // height: 12em;
   animation: fadeOut 5s linear forwards;
+  z-index: 2;
 }
 .particle {
   animation: rise $dur ease-in infinite;
