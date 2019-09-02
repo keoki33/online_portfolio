@@ -191,8 +191,9 @@ h2 {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+
+  height: 190vh;
+  width: 100vw;
   z-index: 5;
   pointer-events: none;
   stroke-dasharray: 80;
@@ -1350,6 +1351,10 @@ $fireSize: 8px;
   // height: 12em;
   animation: fadeOut 5s linear forwards;
   z-index: 2;
+
+  @media screen and (max-width: 605px) {
+    margin-top: 40px;
+  }
 }
 .particle {
   animation: rise $dur ease-in infinite;
