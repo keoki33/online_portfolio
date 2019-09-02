@@ -1354,6 +1354,7 @@ $fireSize: 8px;
   // height: 12em;
   animation: fadeOut 5s linear forwards;
   z-index: 2;
+  pointer-events: none;
 
   @media screen and (max-width: 605px) {
     margin-top: 40px;
