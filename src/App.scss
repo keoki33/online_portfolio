@@ -182,7 +182,10 @@ h2 {
 
   p {
     &:hover {
-      animation: jiggle 0.3s ease forwards infinite;
+      animation: jiggle 0.5s linear infinite;
+    }
+    &.implode {
+      animation: implode 1.4s ease-out forwards;
     }
   }
   svg {
@@ -191,6 +194,16 @@ h2 {
     padding: 5px 25px;
     max-width: 11vh;
     stroke-width: 5px;
+  }
+}
+
+.skillsActive {
+  animation: pulse 0.5s ease-in-out alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(1.1);
   }
 }
 
@@ -1310,20 +1323,16 @@ circle {
 
 @keyframes jiggle {
   0% {
-    opacity: 1;
     transform: rotate(0deg);
   }
-  30% {
+  25% {
     transform: rotate(-5deg);
-    opacity: 1;
   }
-  70% {
+  75% {
     transform: rotate(5deg);
-    opacity: 1;
   }
   100% {
     transform: rotate(0deg);
-    opacity: 1;
   }
 }
 
@@ -1333,6 +1342,69 @@ circle {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes implode {
+  0% {
+  }
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  35% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  45% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  55% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  65% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  85% {
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  100% {
+    transform: scale(0) rotate(-5deg);
   }
 }
 
@@ -1381,7 +1453,7 @@ $fireSize: 8px;
   height: 12em;
   // width: 10em;
   // height: 12em;
-  animation: fadeOut 5s linear forwards;
+  animation: fadeOut 6s linear forwards;
   z-index: 2;
   pointer-events: none;
 
@@ -1390,7 +1462,7 @@ $fireSize: 8px;
   }
 }
 .particle {
-  animation: rise $dur ease-in infinite;
+  animation: rise $dur ease-in 7s;
   background-image: radial-gradient($fireColor 20%, $fireColorT 70%);
   border-radius: 50%;
   mix-blend-mode: screen;
