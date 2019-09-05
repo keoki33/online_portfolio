@@ -186,6 +186,9 @@ h2 {
     }
     &.implode {
       animation: implode 1.4s ease-out forwards;
+      svg path {
+        animation: display3000 1s linear reverse;
+      }
     }
   }
   svg {
@@ -494,14 +497,17 @@ circle {
   z-index: 1;
   h2 {
     text-align: center;
+    // filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
   }
   p {
     text-align: left;
   }
   img {
-    border-radius: 3px;
-    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+    // border-radius: 3px;
+    // -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+
+    // box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
   }
 }
 
