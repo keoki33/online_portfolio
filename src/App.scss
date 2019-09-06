@@ -187,7 +187,7 @@ h2 {
     &.implode {
       animation: implode 1.4s ease-out forwards;
       svg path {
-        animation: display3000 1s linear reverse;
+        animation: destruct 1.2s linear forwards;
       }
     }
   }
@@ -197,6 +197,26 @@ h2 {
     padding: 5px 25px;
     max-width: 11vh;
     stroke-width: 5px;
+  }
+}
+
+@keyframes destruct {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  20% {
+    // fill: transparent;
+    // opacity: 1;
+  }
+  70% {
+    fill: transparent;
+    opacity: 1;
+  }
+  100% {
+    fill: transparent;
+    stroke-dashoffset: 3000;
+    opacity: 1;
   }
 }
 
