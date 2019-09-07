@@ -200,34 +200,8 @@ h2 {
   }
 }
 
-@keyframes destruct {
-  0% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  20% {
-    // fill: transparent;
-    // opacity: 1;
-  }
-  70% {
-    fill: transparent;
-    opacity: 1;
-  }
-  100% {
-    fill: transparent;
-    stroke-dashoffset: 3000;
-    opacity: 1;
-  }
-}
-
 .skillsActive {
-  animation: pulse 0.5s ease-in-out alternate infinite;
-}
-
-@keyframes pulse {
-  to {
-    transform: scale(1.1);
-  }
+  animation: pulse 0.5s cubic-bezier(0.27, 0.76, 0.59, 1.43) alternate infinite;
 }
 
 .lasers {
@@ -1431,6 +1405,32 @@ circle {
 
   100% {
     transform: scale(0) rotate(-5deg);
+  }
+}
+
+@keyframes destruct {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  20% {
+    // fill: transparent;
+    // opacity: 1;
+  }
+  70% {
+    fill: transparent;
+    opacity: 1;
+  }
+  100% {
+    fill: transparent;
+    stroke-dashoffset: 3000;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(1.1);
   }
 }
 
