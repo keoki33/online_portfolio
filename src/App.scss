@@ -252,14 +252,6 @@ h2 {
   fill: #cf649a;
 }
 
-// .rubyLogo path:nth-child(-n + 10) {
-//   opacity: 0;
-//   stroke: #e76565;
-//   stroke-dasharray: 2000px;
-//   stroke-dashoffset: 2000px;
-//   animation: display2000 3s linear forwards 0.6s;
-// }
-
 .rubyLogo path {
   opacity: 0;
   stroke: #b10d23;
@@ -438,9 +430,6 @@ circle {
   height: 50vh;
 }
 
-.mirrorDiv {
-}
-
 .about.animation-enter,
 .contact.animation-enter,
 .projects.animation-enter {
@@ -548,6 +537,9 @@ circle {
 
 .projects {
   margin-top: -20px;
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
 .projectDivs {
@@ -562,12 +554,6 @@ circle {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-
-  /* background-color: #f8f8f8; */
-}
-
-.projects h2 {
-  margin-bottom: 20px;
 }
 
 .descText {
@@ -661,10 +647,6 @@ circle {
   // transform: scale(1.07);
 
   width: 396px;
-}
-
-.projects h1 {
-  text-align: center;
 }
 
 // .border {
