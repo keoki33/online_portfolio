@@ -27,12 +27,9 @@ nav {
   text-decoration: none;
   height: 130px;
   width: 100%;
-  /* border: 2px solid #1c6ea4; */
   align-items: center;
-  /* background-color: #f5f5f5; */
   justify-content: space-around;
   z-index: 3;
-  /* border-bottom: 2px solid rgba(182, 182, 182, 0.3); */
   border-width: 10%;
   background-color: white;
 }
@@ -947,7 +944,6 @@ circle {
     width: 500px;
     height: 80px;
   }
-
   p {
     text-align: left;
   }
@@ -970,14 +966,14 @@ circle {
     display: inline-block;
     transition: transform 0.3s;
     margin-bottom: 20px;
-  }
-  button:hover {
-    background: #40b1fc;
-    transform: scale(1.05);
-  }
-  button:active {
-    background: #144e75;
-    transform: scale(1);
+    &:hover {
+      background: #40b1fc;
+      transform: scale(1.05);
+    }
+    &:active {
+      background: #144e75;
+      transform: scale(1);
+    }
   }
 }
 
