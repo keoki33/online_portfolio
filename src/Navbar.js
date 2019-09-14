@@ -122,7 +122,7 @@ class Navbar extends Component {
               this.animateFace();
             }}
             style={style}
-            src={require(`./images/face.jpg`)}
+            src={require(`${this.props.facePic}`)}
             alt=""
             className={this.state.faceClass}
             id="facePic"

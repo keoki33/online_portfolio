@@ -20,7 +20,7 @@ class App extends Component {
     y: 0,
     clicked: false,
     navbarClass: "navbarIn",
-    facePic: "./images/180.png",
+    facePic: "./images/face.png",
     middleX: 0,
     middleY: 0,
     laser: false,
@@ -96,9 +96,13 @@ class App extends Component {
     this.screenPos();
 
     if (window.location.pathname === "/") {
-      this.setState({ laser: true, fireCount: this.state.fireCount + 1 });
+      this.setState({
+        laser: true,
+        fireCount: this.state.fireCount + 1,
+        facePic: "./images/smile.png"
+      });
       setTimeout(() => {
-        this.setState({ laser: false });
+        this.setState({ laser: false, facePic: "./images/face.png" });
       }, 300);
     }
     this.fire();
