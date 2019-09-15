@@ -197,6 +197,7 @@ h2 {
 
 .skillsActive {
   animation: pulse 0.5s cubic-bezier(0.27, 0.76, 0.59, 1.43) alternate infinite;
+  // animation: swing 1s linear forwards infinite 1s;
 }
 
 .lasers {
@@ -1401,7 +1402,34 @@ circle {
 
 @keyframes pulse {
   to {
-    transform: scale(1.1);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 }
 
