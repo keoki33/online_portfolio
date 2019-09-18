@@ -9,7 +9,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
-import ProjectsV2 from "./ProjectsV2";
+// import ProjectsV2 from "./ProjectsV2";
 import Fire from "./Fire";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -48,22 +48,6 @@ class App extends Component {
     // console.log(this.state.x);
     // console.log(this.state.y);
   }
-
-  // facePic = () => {
-  //   if (this.state.clicked) {
-  //     this.setState({ facePic: "./images/smile.jpg" }, () =>
-  //       setTimeout(() => {
-  //         this.setState({ clicked: false });
-  //       }, 1000)
-  //     );
-  //   } else if (this.state.x > 2550) {
-  //     this.setState({ facePic: "./images/230.png" });
-  //   } else if (this.state.x < 2330) {
-  //     this.setState({ facePic: "./images/130.png" });
-  //   } else {
-  //     this.setState({ facePic: "./images/180.png" });
-  //   }
-  // };
 
   handleClick = () => {
     this.setState({ clicked: true });
@@ -126,22 +110,6 @@ class App extends Component {
     });
     // console.log(this.state.width);
   };
-
-  // fire = () => {
-  //   for (let i = 0; i < this.state.fireCount; i++) {
-  //     this.setState({
-  //       fireArray: [
-  //         ...this.state.fireArray,
-  //         <Fire key={this.state.fireCount} x={this.state.x} y={this.state.y} />
-  //       ]
-  //     });
-  //   }
-  //   if (this.state.fireArray.length > 5) {
-  //     this.setState({
-  //       fireArray: this.state.fireArray.slice(1)
-  //     });
-  //   }
-  // };
 
   fire = () => {
     this.setState(
