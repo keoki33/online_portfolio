@@ -97,7 +97,7 @@ nav {
     color: rgb(32, 32, 32);
     font-size: 15px;
     height: 90px;
-    margin-top: -14px;
+    margin-top: -19px;
   }
 
   .facePic {
@@ -914,6 +914,7 @@ circle {
     text-decoration: none;
     padding: 15px;
     width: 75px;
+    height: 75px;
     transition: transform 0.3s;
     /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
@@ -989,15 +990,15 @@ circle {
     padding: 1%;
     text-align: center;
     font-size: 4vw;
-  }
-
-  .contact img {
-    text-decoration: none;
-    padding: 5%;
-    width: 14vw;
-    transition: transform 0.3s;
-    /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
+    img {
+      text-decoration: none;
+      padding: 5%;
+      width: 14vw;
+      height: 14vw;
+      transition: transform 0.3s;
+      /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
+    }
   }
 
   .contact form {
