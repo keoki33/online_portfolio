@@ -601,10 +601,11 @@ circle {
 .gamePic,
 .recipePic {
   width: 380px;
+  height: 285px;
   position: absolute;
   -webkit-box-shadow: 5px 5px 10px 0px rgba(120, 120, 120, 0.77);
   box-shadow: 5px 5px 10px 0px rgba(120, 120, 120, 0.77);
-
+  background-color: rgba(0, 0, 0, 0.89);
   transition: transform 0.2s, width 0.2s, height 0.2s;
   z-index: 1;
 }
