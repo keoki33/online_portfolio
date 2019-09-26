@@ -908,7 +908,7 @@ circle {
   // background-size: 130% 100%;
   // height: 100vh;
   // background: url("./images/matrix.jpg") no-repeat center top;
-  img {
+  svg {
     margin-left: 10px;
     margin-right: 10px;
     text-decoration: none;
@@ -916,12 +916,21 @@ circle {
     width: 75px;
     height: 75px;
     transition: transform 0.3s;
+    fill: rgba(65, 183, 252, 0.308);
+    animation: draw 3s cubic-bezier(0.27, 0.76, 0.59, 1.43) infinite alternate;
+    stroke-dasharray: 3200 1000;
+    stroke-dashoffset: 3200;
+    stroke: #0077ff;
+    stroke-width: 15px;
     /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
   }
-  img:hover {
-    border: none;
+  svg:hover {
+    animation: none;
     transform: scale(1.05);
+    stroke-dashoffset: 3100;
+    stroke-dasharray: 3100;
+    stroke: black;
   }
 
   a {
@@ -974,6 +983,17 @@ circle {
       background: #144e75;
       transform: scale(1);
     }
+  }
+}
+
+@keyframes draw {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 2200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(65, 183, 252, 0.308);
   }
 }
 
