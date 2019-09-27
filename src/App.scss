@@ -917,8 +917,8 @@ circle {
     height: 75px;
     transition: transform 0.3s;
     fill: rgba(65, 183, 252, 0.308);
-    animation: draw 3s cubic-bezier(0.27, 0.76, 0.59, 1.43) infinite alternate;
-    stroke-dasharray: 3200 1000;
+    animation: draw 5s cubic-bezier(0.27, 0.76, 0.59, 2.43) infinite alternate;
+    stroke-dasharray: 3200 2000;
     stroke-dashoffset: 3200;
     stroke: #0077ff;
     stroke-width: 15px;
@@ -926,11 +926,12 @@ circle {
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
   }
   svg:hover {
-    animation: none;
-    transform: scale(1.05);
-    stroke-dashoffset: 3100;
-    stroke-dasharray: 3100;
-    stroke: black;
+    animation: draw2 3s ease infinite alternate;
+
+    stroke-dashoffset: 3200;
+    stroke-dasharray: 200;
+    stroke-width: 15px;
+    // stroke: black;
   }
 
   a {
@@ -994,6 +995,24 @@ circle {
   100% {
     stroke-dashoffset: 0;
     fill: rgba(65, 183, 252, 0.308);
+  }
+}
+
+@keyframes draw2 {
+  0% {
+    stroke-dashoffset: 3300;
+    fill: rgba(65, 183, 252, 0.308);
+    transform: scale(1);
+  }
+  50% {
+    stroke-dashoffset: 1500;
+    fill: transparent;
+    transform: scale(1.3);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(65, 183, 252, 0.308);
+    transform: scale(1);
   }
 }
 
