@@ -151,6 +151,14 @@ h2 {
   margin: 15px;
 }
 
+.homeDesc p {
+  font-family: "Courgette", cursive;
+
+  font-size: 20px;
+  // font-weight: bold;
+  // line-height: 15px;
+}
+
 .skillsLogoWrapper {
   margin-top: 1%;
   margin: 0 auto;
@@ -486,6 +494,11 @@ circle {
 
     // box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
     filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
+  }
+  h3 {
+    font-family: "Courgette", cursive;
+    font-size: 20px;
+    font-weight: 100;
   }
 }
 
@@ -922,9 +935,10 @@ circle {
     stroke-dashoffset: 3200;
     stroke: #0077ff;
     stroke-width: 10px;
-    /* -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77);
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.77); */
+
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.4));
   }
+
   svg:hover {
     animation: draw2 3s ease infinite alternate;
 
