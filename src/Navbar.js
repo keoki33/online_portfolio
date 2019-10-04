@@ -112,6 +112,7 @@ class Navbar extends Component {
         {/* <img src={require(`${this.smile()}`)} alt="" className="facePic" />{" "} */}
         <div className="faceDiv">
           <img
+            rel="preload"
             // onMouseEnter={event => {
             //   this.setState({ rX: 0, rY: 0, hover: true });
             // }}
