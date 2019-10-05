@@ -78,7 +78,6 @@ class Projects extends Component {
   };
 
   componentWillUnmount() {
-    // synth.cancel();
     clearInterval(this.interval);
   }
 

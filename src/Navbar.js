@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+// import face from "./images/face.png";
+// import smile from "./images/smile.png";
 
 class Navbar extends Component {
   state = {
@@ -27,6 +29,10 @@ class Navbar extends Component {
   };
 
   componentDidMount() {
+    let face = new Image();
+    face.src = require("./images/face.png");
+    let smile = new Image();
+    smile.src = require("./images/smile.png");
     if (window.location.pathname === "/") {
       this.setState({ class: "navbarIn" });
     } else {
@@ -93,6 +99,14 @@ class Navbar extends Component {
     }, 1000);
   };
 
+  // faceSmile = () => {
+  //   return this.props.facePic == "./images/face.png" ? face : smile;
+  // };
+
+  // faceSmile2 = () => {
+  //   return face;
+  // };
+
   render() {
     let rotate = `rotate3d(${this.state.rY}, ${this.state.rX}, 0, 50deg)`;
 
@@ -124,6 +138,7 @@ class Navbar extends Component {
             }}
             style={style}
             src={require(`${this.props.facePic}`)}
+            // src={this.faceSmile()}
             alt=""
             className={this.state.faceClass}
             id="facePic"

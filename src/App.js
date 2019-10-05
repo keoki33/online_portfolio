@@ -20,6 +20,7 @@ class App extends Component {
     y: 0,
     clicked: false,
     navbarClass: "navbarIn",
+
     facePic: "./images/face.png",
     middleX: 0,
     middleY: 0,
@@ -31,6 +32,10 @@ class App extends Component {
   whatever = () => {};
 
   componentDidMount() {
+    let face = new Image();
+    face.src = require("./images/face.png");
+    let smile = new Image();
+    smile.src = require("./images/smile.png");
     this.screenPos();
   }
 
@@ -78,13 +83,15 @@ class App extends Component {
 
   shoot = () => {
     this.screenPos();
-
     if (window.location.pathname === "/") {
-      this.setState({
-        laser: true,
-        fireCount: this.state.fireCount + 1,
-        facePic: "./images/smile.png"
-      });
+      this.setState(
+        { facePic: "./images/smile.png" },
+        this.setState({
+          laser: true,
+          fireCount: this.state.fireCount + 1
+        })
+      );
+
       setTimeout(() => {
         this.setState({ laser: false, facePic: "./images/face.png" });
       }, 300);
