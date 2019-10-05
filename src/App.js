@@ -84,13 +84,11 @@ class App extends Component {
   shoot = () => {
     this.screenPos();
     if (window.location.pathname === "/") {
-      this.setState(
-        { facePic: "./images/smile.png" },
-        this.setState({
-          laser: true,
-          fireCount: this.state.fireCount + 1
-        })
-      );
+      this.setState({
+        facePic: "./images/smile.png",
+        laser: true,
+        fireCount: this.state.fireCount + 1
+      });
 
       setTimeout(() => {
         this.setState({ laser: false, facePic: "./images/face.png" });
