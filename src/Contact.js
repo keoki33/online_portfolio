@@ -50,7 +50,12 @@ class Contact extends Component {
   render() {
     return (
       <div className={this.state.class}>
-        <h1>Hello | Hola | Néih Hóu</h1>
+        <h1>Hello</h1>
+        <h1> | </h1>
+        <h1>Hola</h1>
+        <h1> | </h1>
+        <h1>Néih Hóu</h1>
+        <br />
         <a href="mailto: contact@georgetlwong.com">
           {/* <img src={require("./images/email.svg")} alt="" className="facePic" />{" "} */}
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
