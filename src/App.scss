@@ -44,6 +44,8 @@ nav {
   padding: 0;
   height: 40px;
   background-color: #f8f8f8;
+  border-radius: 10px;
+  // box-shadow: rgba(0, 0, 0, 0.801) 3px 3px 5px 0px;
   ul,
   li {
     display: inline;
@@ -983,6 +985,8 @@ circle {
     height: 330px;
     background-color: rgb(235, 235, 235);
     padding: 20px;
+    border-radius: 10px;
+    // box-shadow: rgba(0, 0, 0, 0.801) 3px 3px 10px 0px;
   }
   input {
     width: 500px;
@@ -1009,7 +1013,7 @@ circle {
     font-variant: normal;
     text-transform: none;
     background: #2284c5;
-    box-shadow: rgb(0, 0, 0) 2px 2px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.801) 3px 3px 10px 0px;
     border: 2px solid rgb(28, 110, 164);
     display: inline-block;
     transition: transform 0.3s;
