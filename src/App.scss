@@ -92,7 +92,7 @@ nav {
     color: rgb(32, 32, 32);
     font-size: 15px;
     height: 90px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .navbarOut {
@@ -100,6 +100,7 @@ nav {
     font-size: 15px;
     height: 90px;
     margin-top: -28px;
+    margin-bottom: 30px;
   }
 
   .facePic {
@@ -482,6 +483,7 @@ circle {
 /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
 
 .about {
+  margin-top: -20px;
   z-index: 1;
   h2 {
     text-align: center;
@@ -904,7 +906,7 @@ circle {
   width: auto;
   text-align: center;
   display: inline-block;
-  margin-top: -30px;
+  margin-top: -20px;
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
