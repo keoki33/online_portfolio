@@ -6,9 +6,7 @@ import pdfFile from "./images/resume.pdf";
 import { Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import { pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
-  pdfjs.version
-}/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 class Resume extends Component {
   state = {
@@ -59,8 +57,14 @@ class Resume extends Component {
           // renderMode="canvas"
           // loading={<Loading />}
         >
-          <Page width={this.width()} className="pdfPage" pageNumber={1} />
-          <Page width={this.width()} className="pdfPage" pageNumber={2} />
+          <Page width={this.width()} className="pdfPage1" pageNumber={1} />
+
+          <Page
+            id="pdfPage2"
+            width={this.width()}
+            className="pdfPage2"
+            pageNumber={2}
+          />
         </Document>
 
         <Footer />
